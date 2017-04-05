@@ -1,0 +1,86 @@
+% !TEX program = xelatex
+% !TEX root = thesis.tex
+\documentclass{itmo-thesis}
+
+\usepackage{upgreek}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzscale}
+
+\newcommand{\hlb}[1]{
+            {\color{blue} #1}}
+\newcommand{\hlr}[1]{
+            {\color{red} #1}}
+\newcommand{\hlg}[1]{
+            {\color{olive} #1}}
+
+
+\setmainlanguage{english}
+\begin{document}
+
+% \filltitle{ru}{
+%     chair              = {Кафедра нанофотоники и метаматериалов},
+%     title              = {Резонансные оптические свойства диэлектрических наночастиц, полученных методом фемтосекундной лазерной абляции},
+%     type               = {master},
+%     position           = {студента},
+%     group              = {V4240},
+%     coursenum          = {12.04.03},
+%     course             = {Нанофотоника и Метаматериалы},
+%     author             = {Дмитриев Павел Алексеевич},
+%     supervisorPosition = {к.\,ф.-м.\,н.},
+%     supervisor         = {Самусев А.\,К.},
+%     reviewerPosition   = {Кто-то},
+%     reviewer           = {ваще такой},
+%     chairHeadPosition  = {д.\,ф.-м.\,н.},
+%     chairHead          = {Белов П.\,А.},
+% }
+
+\filltitle{en}{
+    chair              = {Department of Nanophotonics and Metamaterials},
+    title              = {Resonant Optical Properties of Crystalline Dielectric Nanopatricles, Farbicated by Laser Ablation-Based Methods},
+    type               = {master},
+    position           = {Student},
+    group              = {V4240},
+    coursenum          = {12.04.03},
+    course             = {Nanophotonics and Metamaterials},
+    author             = {Dmitriev Pavel Alekseevich},
+    supervisorPosition = {Dr. },
+    supervisor         = {Makarov S.\,V. \\ Dr. Samusev A.\, K.},
+    reviewerPosition   = {},
+    reviewer           = {},
+    chairHeadPosition  = {D. Sc.},
+    chairHead          = {Belov P.\,A.},
+}
+\maketitle
+\tableofcontents
+
+\input{Ch_Intro}
+\input{Ch_Theory}
+\input{Ch_ExpMethods}
+\input{Ch_Experiment}
+\input{Ch_Conclusions}
+\input{Ch_Results}
+\input{Ch_Acknowledge}
+% \appendix
+
+\newpage
+\nocite{*}
+%\setlength{\parskip}{-3pt}
+%\renewcommand\bibsection{\nsection{Литература}}
+%\let\oldbibliography\thebibliography
+%\renewcommand{\thebibliography}[1]{%
+%  \oldbibliography{#1}
+%  \setlength{\itemsep}{6pt}
+%}
+%\def\BibPrefix{}
+
+
+%\bibliographystyle{disser_m}
+\bibliographystyle{ugost2008ls}
+\input{biblink}
+\end{document}
