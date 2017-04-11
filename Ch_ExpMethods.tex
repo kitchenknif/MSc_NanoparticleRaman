@@ -3,16 +3,19 @@
 \section{Methods and Materials}
 \label{ch:Exp}
 
-    \subsection{\hlr{Fabrication of Nanoparticles by Femtosecond Laser Ablation}}
+    \subsection{\hlb{Fabrication of Nanoparticles by Femtosecond Laser Ablation}}
     \label{sec:Ablation}
-%            The first part of the project was to develop a new, simple, method of fabricating crystalline dielectric
-%        nanoparticles. The idea was to use controlled laser ablation~--- a very simple technique~--- to produce the particles.
-%        Previous work on the topic by us [PARTICLE WRITING] and Boris Chichkov [LASER PRINTING] gave two methods that could be
-%        adapted to our needs. Our method, laser writing, had been used to fabricate large-scale arrays of plasmonic particles,
-%        and could, in theory be adapted to dielectric particles. Boris Chichkov's laser printing had most of the required
-%        characteristics for crystalline particle fabrication - controllable particle size, transfer to other substrates, but
-%        was unable to fabricate crystalline particles~--- an additional annealing step was required to crystallize the fabricated
-%        particles.
+            The first part of the project was to develop a new, simple, method of fabricating crystalline dielectric
+        nanoparticles. The idea was to use controlled laser ablation~--- a very simple technique~--- to produce the particles.
+        Previous work on the topic\cite{kuznetsov2012magnetic, zywietz2014laser} has shown that it is possible to fabricate single particles
+        of a certain size.
+
+            We ended up developing two different methods to fabricate crystalline nanoparticles~--- direct laser writing of crystalline
+        nanoparticles out of a thin film of amorphous silicon (adapted from a method used for plasmonic nanoparticles\cite{makarov2016controllable,
+        dmitriev2016direct}), and a forward transfer of nanoparticles by single femtosecond laser pulses
+        from a transparent substrate with a a thin film of amorphous silicon to an arbitrary acceptor substrate. The second method is
+        similar to the the one presented in \cite{zywietz2014laser}, but doesn't require any additional annealing steps to achieve
+        nanoparticle crystallinity and isn't limited to transparent acceptor substrates.
 
         \begin{figure}[h!]
                 \begin{center}
@@ -23,68 +26,58 @@
                             thin films.}
         \end{figure}
 
+        \subsubsection{\hlb{Laser transfer of crystalline dielectric particles}}
+                Laser transfer of crystalline nanoparticles was carried out using a femtosecond laser system
+            (Femtosecond Oscillator TiF-100F, Avesta Poject), emitting laser pulses at a central wavelength of $800~\si{nm}$,
+            with pulse duration of $100~\si{fs}$, and repetition frequency of $80~\si{MHz}$. Single laser pulses were selected
+            by a Pockels cell-based pulse picker (also Avesta Project), focused by an oil immersion microscope objective (Olympus $100\times$)
+            with a numerical aperture of $\mathit{NA}=1.4$. According to the relation $\emph{d}\approx 1.22\lambda/\mathit{NA}$, the estimated
+            diameter of the beam's focal spot size was $d=0.7~\si{\upmu m}$, which was close to the value measured by a method based on
+            the dependence of the laser-damaged area on incident laser energy ($0.68~\si{\upmu m}$)~\cite{liu1982simple}.
+            The nanoparticles were fabricated from an $80~\si{nm}$ thick a-Si:H film deposited on a fused silica substrate by
+            plasma enhanced chemical vapor deposition from a SiH$_{3}$ precursor gas.
 
-        \subsubsection{\hlr{Laser writing of dielectric particles}}
-                The novel method of direct laser writing is also applicable for c-Si nanoparticles fabrication from initially amorphous
-            a-Si:H film. Under the optimal conditions of fabrication the resulting array of nanoparticles has a period of about
-            $0.9~\si{\upmu m}$, exhibiting bright colors owing to resonant scattering (figure~\ref{fig:LaserWriting}(a))~\cite{krasnok2015towards}.
-            Despite the cutting should produce rectangular grating, our SEM images show the spherical shape of the nanoparticle. Indeed,
-            the laser fluence $F\approx100~\si{mJ/cm^{2}}$ provides film heating close to the melting point even in a single shot regime,
-            whereas $12.5~\si{ns}$ delay between pulses leads to the temperature accumulation and exceeding of the ablation threshold.
-            The heat transferring from the ablated area to the surrounding film is accumulated much stronger in the cut patches,
-            which are thermally isolated from the rest of the film. These micro-patches are unstable at high temperatures and undergo
-            dewetting to a certain number of similar nanoparticles~\cite{thompson2012solid}. In order to provide deeper insight,
-            we model the time dynamics of the cut liquid Si patch with the height of $80~\si{nm}$ and similar widths of $300~\si{nm}$ (Figs.~\ref{fig:LaserWriting}B)
-            on a fused silica substrate in the COMSOL software, solving the incompressible Navier-Stokes equations and taking into account
-            the parameters of the used materials. The modeling shows that after ten nanoseconds the patch is transformed into the semisphere with
-            the height about $130~\si{nm}$ and width about $310~\si{nm}$ (Figs.~\ref{fig:LaserWriting}B-E), giving qualitative agreement with
-            the experimentally observed shapes.
+                The nanoparticles were fabricated by single laser pulses (from a previously undamaged surface of the a-Si:H film) in a
+            forward-transfer geometry, where the receiving substrate is placed under the film with a spacing
+            of $\sim 50~\si{\upmu m}$ (figure~\ref{fig:LaserPrinting}(a)). This geometry has an advantage over the back-transfer geometry
+            used in \cite{zywietz2014laser}, because of the possibility of transferign nanoparticles onto a wide variety of substrates,
+            including opaque and structured samples.
 
+                The silicon nanoparticles were printed at laser energies in the range of $0.5-1.2~\si{nJ}$, providing fluencies in
+            the range of $0.12-0.16~\si{J/cm^{2}}$. The fabricated nanoparticles were almost spherical in shape(figure~\ref{fig:Crystallinity}(b))
+            and their diameters lie in the range of $50-200~\si{nm}$, depending on the fluence.
 
-
-        \subsubsection{\hlr{Laser transfer of crystalline dielectric particles}}
-                The silicon nanoparticles  were printed by a femtosecond laser system (Femtosecond Oscillator TiF-100F, Avesta Poject),
-            which emits laser pulses at a central wavelength of $800~\si{nm}$, with pulse duration of $100~\si{fs}$, and repetition rate
-            of $80~\si{MHz}$. Laser pulses selected by a Pockels cell-based pulse picker (Avesta Poject) were tightly focused by an
-            oil immersion microscope objective (Olympus $100\times$) with a numerical aperture of $\mathit{NA}=1.4$. According to the
-            relation $\emph{d}\approx 1.22\lambda/\mathit{NA}$, the estimated diameter of the beam's focal spot size is $d=0.7~\si{\upmu m}$,
-            close to the value measured by a method based on the dependence of the laser-damaged area on incident laser energy ($0.68~\si{\upmu m}$)~\cite{liu1982simple}.
-    	    The nanoparticles were fabricated from an $80~\si{nm}$ thick a-Si:H film, which was deposited on a substrate of fused silica by
-            plasma enhanced chemical vapor deposition from a SiH$_{3}$ precursor gas. The samples were placed on a three-dimensional air-bearing
-            translating stage driven by brushless servomotors (ABL1000, Aerotech), with sample translation accuracy at least $100~\si{nm}$.
-	        The nanoparticles were fabricated by single laser pulses (from a previously undamaged surface) in the forward-transfer geometry,
-            in which the receiving substrate is placed under the film with a spacing of $\sim 50~\si{\upmu m}$ (figure~\ref{fig:LaserPrinting}(a)).
-            This geometry has an advantage over the back-transfer geometry owing to the possibility of nanoparticle printing onto a wide
-            variety of substrates, including opaque and structured samples. The silicon nanoparticles were printed at laser energies in the
-            range of $0.5-1.2~\si{nJ}$, providing fluencies in the range of $0.12-0.16~\si{J/cm^{2}}$. The nanoparticles are almost spherical
-            in shape(figure~\ref{fig:Crystallinity}(b)) and their diameters lie in the range of $50-200~\si{nm}$, depending on the fluence.
+        \subsubsection{\hlb{Laser writing of dielectric particles}}
+                The direct laser writing of crystalline Si nanoparticles was carried out from an initially amorphous a-Si:H film.
+            The process consists of using a train of femtosecond pulses to cut patches out of the a-Si thin film\cite{makarov2016controllable,
+            dmitriev2016direct}. A laser fluence $F\approx100~\si{mJ/cm^{2}}$ provides film heating close to the melting point even in a
+            single shot regime, while a pulse train with a $12.5~\si{ns}$ delay between pulses leads to the temperature accumulation
+            and exceeding of the ablation threshold. The heat transferring from the ablated area to the surrounding film is accumulated
+            much stronger in the cut patches, which are thermally isolated from the rest of the film.
+            These micro-patches are unstable at high temperatures and undergo dewetting to a certain number of similar
+            nanoparticles~\cite{thompson2012solid}.
 
 
-
-    \subsection{\hlr{Electron Microscopy and X-Ray Diffractometry}}
+    \subsection{\hlb{Electron Microscopy}}
     \label{sec:SEM}
             The geometrical parameters of the fabricated particles were measured by Scanning Electron Microscopy (SEM),
-        Transmission Electron Microscopy (TEM). X-Ray Diffractormetry was used to probe the crystalline structure of the
-        nanoparticles.
+        Transmission Electron Microscopy (TEM).
+
         \subsubsection{\hlr{Scanning Electron Microscopy}}
-                Indeed, scanning electron microscopy (SEM, Carl Zeiss, Neon 40) confirms that the particles possess \hlr{axial}
+                Scanning electron microscopy (SEM, Carl Zeiss, Neon 40) confirms that the particles possess \hlr{axial}
             symmetry along the substrate normal (Fig.~\ref{fig:Crystallinity}B). These results correlate with previously observed
             oblateness of printed silicon nanoparticles~\cite{zywietz2014laser}.
 
-        \subsubsection{\hlr{Transmission Electron Microscopy}}
+        \subsubsection{\hlb{Transmission Electron Microscopy}}
                 We used specimen grids (3-mm-diameter, 200-mesh copper grids, coated on one side with a 20-nm-thick film
             of amorphous carbon) to collect nanoparticles ablated from the a-Si:H film. The size, structure, and composition
             of the collected nanoparticles were determined using bright and dark field TEM imaging, see the inset in
             Fig.~\ref{fig:Crystallinity}B. The analysis of the electron diffraction pattern from several nanoparticles shows clear maxima,
             corresponding to certain crystalline planes (Fig.~\ref{fig:Crystallinity}C). \hlr{Because the specimen grids were uneven, the
-            nanoparticles were deposited at different angles to the substrate meaning that} TEM imaging also provides infor
-            mation on the oblateness of the particles along the direction perpendicular to the substrate surface, giving
+            nanoparticles were deposited at different angles to the substrate meaning that} TEM imaging also provides information
+            on the oblateness of the particles along the direction perpendicular to the substrate surface, giving
             the average ellipticity about $a_{\parallel}/a_{\perp}\approx$1.12, where $a_{\parallel}$($a_{\perp}$) is
             the particle semi-major (semi-minor) axis oriented parallel (perpendicular) to the surface of the substrate.
-
-        \subsubsection{\hlr{X-Ray Diffractormetry}}
-
-
 
     \subsection{\hlb{Optical Measurements}}
             All of the optical characterization measurements were carried out on a multifuncational setup, depicted in
@@ -455,3 +448,4 @@
                 \caption{Schematic of used names for sides/directions of the unit cell}
                 \label{fig:Dir_Int}
             \end{figure}
+\clearpage
