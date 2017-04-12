@@ -2,31 +2,42 @@
 % !TEX root = thesis.tex
 \section{Introduction}
 \label{ch:Intro}
-    \subsection{\hlr{Photonics}}
-        \label{sec:Photonics}
-            Photonics is a field that studies the properties of light, photons; methods
-        of controlling and transmitting light. Most notably is the the subfield of fiber optics,
-        with practical applications in the telecommunications industry~--- all modern trans-atlatnic
-        and trans-pacific telecom cables are optical fibers. A correlated field, slightly misleadingly
-        called silicon photonics (silicon, while being the most popular material, is not the only
-        material used), sits between fiber optics and electronics. Silicon photonic devices
-        generally are used to convert electronic signals to optical signals and vice versa.
+    \subsection{\hlr{Nanophotonics}}
+        \label{sec:Nanophotonics}
+            Nanophotonics is a field that studies light manipulation at the nanoscale~--- using various nanostructures to control the
+        propagation of light. Nanophotonic devices can range from relatively simple perfect reflectors/absorbers to optical computers.
+        Applications include antireflective coatings for solar cells, all-optical switching for optical telecommunications, and various
+        medical sensing tasks.
 
-            Most modern developments in silicon photonics are trying to miniaturize photonic
-        devices and bring them ``deeper'' into electronic circuits ~--- e.g. to try and
-        realize all-optical switching for packet routing [CITATION]. This is complicated by
-        problems inherent to traditional silicon photonics~--- large waveguide sizes, slow switching,
-        based almost exclusively on heating elements, etc... This is where the field of nanophotonics
-        can be very important.
+            Traditionally nanophotonic devices have utilized plasmonic nanostructures. Plasmonic metallic nanoparticles have very strong
+        electric dipole resonances, meaning that they readily interact with the electric component of electromagnetic fields. Problems arise
+        when one tries to control the magnetic component of electromagnetic fields, because plasmonic nanoparticles do not have an inherent
+        magnetic dipole response. A solution is the split-ring resonator~--- a nanostructure with a magnetic dipole response. Having building
+        blocks to control both the electric and magnetic components of electromagnetic fields, plasmonic structures have been efficiently
+        used in frequency ranges from gigahertz to several hundred terahertz~--- up to infrared wavelengths. But, because of strong losses
+        in the optical spectral range, and of the complexity of fabricating split-ring resonators for optical wavelengths, plasmonics have
+        had a lot of difficulty in achieved the required performance for optical nanophotnoic devcies.
 
         \cite{krasnok2015towards}
     \subsection{\hlr{Dielectric Nanophotonics}}
-        \cite{kuznetsov2012magnetic}
+            This is where the concept of dielectric nanophotonics comes into play. Mie theory predicts\cite{mie1908beitrage} and
+        it has been experimentally demonstrated\cite{kuznetsov2012magnetic} that dielectric nanoparticles have both electric and
+        magnetic resonances. The positions of the resonances are size and shape dependant, making them easily tunable for any wavelength.
+        Crystalline silicon has proven itself as a good material for dielectric nanophotonics~--- low losses at optical wavelengths\cite{palik1998handbook},
+        high refractive index, and compatibility with many fabrication processes\cite{popa2008compact,zhao2009mie,evlyukhin2010optical,garcia2011strong,
+        krasnok2012all,ginn2012realizing,fu2012directional,krasnok2015towards}.
+
+            Dielectric nanoparticles have been used for sensing and eletromagnetic field enchancement\cite{albella2013low,zambrana2015purcell,
+        bakker2015magnetic,caldarola2015non}, antireflective coatings\cite{spinelli2012broadband},  perfect reflectors\cite{evlyukhin2010optical,
+        moitra2014experimental}, light wavefront manipulation\cite{decker2015high,yu2015high}, superdirective scattering\cite{krasnok2014superdirective,
+        krasnok2014experimental} and enhancement of nonlinear effects\cite{shcherbakov2014enhanced,makarov2015tuning}.
+
     \subsection{\hlr{Fabrication of Dielectric Nanoparticles}}
             There are several techniques to fabricate dielectric nanoparticles. They can be ordered in terms of level of control over the size
         of the particles and the options of building patterned nanostructures for the nanoparticles. Complexity and cost of the processes generally
         correlate with the level of control provided by the different techniques.
-            The main techniques can be grouped into: chemical synthesis, thin-film dewetting, laser ablation-based and lithographic methods.
+            The main techniques can be grouped into: chemical synthesis\cite{shi2012new}, thin-film dewetting\cite{abbarchi2014wafer},
+        laser ablation-based\cite{zywietz2014laser} and lithographic methods.
 
         \subsubsection{\hlr{Chemical synthesis}}
                 Chemical vapor deposition of silicon from disilane gas has been used to fabricate silicon nanoparticles, ($Si_2H_6 \rightarrow 2Si + 3H_2$ at
