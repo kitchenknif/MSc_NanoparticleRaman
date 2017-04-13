@@ -2,7 +2,7 @@
 % !TEX root = thesis.tex
 \section{Introduction}
 \label{ch:Intro}
-    \subsection{\hlr{Nanophotonics}}
+    \subsection{\hlb{Nanophotonics}}
         \label{sec:Nanophotonics}
             Nanophotonics is a field that studies light manipulation at the nanoscale~--- using various nanostructures to control the
         propagation of light. Nanophotonic devices can range from relatively simple perfect reflectors/absorbers to optical computers.
@@ -16,10 +16,9 @@
         blocks to control both the electric and magnetic components of electromagnetic fields, plasmonic structures have been efficiently
         used in frequency ranges from gigahertz to several hundred terahertz~--- up to infrared wavelengths. But, because of strong losses
         in the optical spectral range, and of the complexity of fabricating split-ring resonators for optical wavelengths, plasmonics have
-        had a lot of difficulty in achieved the required performance for optical nanophotnoic devcies.
+        had a lot of difficulty in achieved the required performance for optical nanophotnoic devcies.\cite{krasnok2015towards}
 
-        \cite{krasnok2015towards}
-    \subsection{\hlr{Dielectric Nanophotonics}}
+    \subsection{\hlb{Dielectric Nanophotonics}}
             This is where the concept of dielectric nanophotonics comes into play. Mie theory predicts\cite{mie1908beitrage} and
         it has been experimentally demonstrated\cite{kuznetsov2012magnetic} that dielectric nanoparticles have both electric and
         magnetic resonances. The positions of the resonances are size and shape dependant, making them easily tunable for any wavelength.
@@ -32,29 +31,43 @@
         moitra2014experimental}, light wavefront manipulation\cite{decker2015high,yu2015high}, superdirective scattering\cite{krasnok2014superdirective,
         krasnok2014experimental} and enhancement of nonlinear effects\cite{shcherbakov2014enhanced,makarov2015tuning}.
 
-    \subsection{\hlr{Fabrication of Dielectric Nanoparticles}}
+        \subsubsection{\hlb{Crystalline silicon as the material of choice for Dielectric Nanophotonics}}
+                Crystalline silicon has been almost ubiquitously chosen as the material of choice for dielectric nanophotonics.
+            There are several reasons for this. First, the material parameters are suitable for visible and infrared nanophotonic devices~---
+            Crystalline silicon has a high refractive index, $n \approx 3.5$ at visible and IR wavelengths\cite{li1980refractive}, giving high contrast
+            with air, and therefore good field confinement for resonant particles at those wavelengths\cite{mie1908beitrage, dmitriev2016resonant}. Also
+            a very important fact, distinguishing crystalline silicon from amorphous silicon, is the near-zero absorbtion at visible wavelengths, meaning
+            that crystalline silicon nanoparticles are nearly lossess at visible and IR wavelengths, making any potential nanophotonic devices very
+            efficient and not prone to thermal dissipation~--- something that plagues their plasmonic counterparts.
+                Silicon, being the basis of almost all modern electronics, can easliy boast a highly developed ecosystem of fabrication and processing
+            technologies, making it very easy (if expensive) to fabricate almost any required structure.
+                \hlr{Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotnoic devices for medical applications.}
+
+    \subsection{\hlb{Fabrication of Dielectric Nanoparticles}}
             There are several techniques to fabricate dielectric nanoparticles. They can be ordered in terms of level of control over the size
         of the particles and the options of building patterned nanostructures for the nanoparticles. Complexity and cost of the processes generally
         correlate with the level of control provided by the different techniques.
             The main techniques can be grouped into: chemical synthesis\cite{shi2012new}, thin-film dewetting\cite{abbarchi2014wafer},
         laser ablation-based\cite{zywietz2014laser} and lithographic methods.
 
-        \subsubsection{\hlr{Chemical synthesis}}
+        \subsubsection{\hlb{Chemical synthesis}}
                 Chemical vapor deposition of silicon from disilane gas has been used to fabricate silicon nanoparticles, ($Si_2H_6 \rightarrow 2Si + 3H_2$ at
-            high temperatures) achieving polycrystalline spherical particles. Monodisperse colloidal particles have been fabricated from trisilane ($Si_3H_8$)
-            at high temperature in n-Hexane. Sizes of the particles were controlled by changing the concentration of the trisilane and the temperature of the
+            high temperatures) achieving polycrystalline spherical particles\cite{shi2012new}. Monodisperse colloidal particles have been fabricated from trisilane ($Si_3H_8$)
+            at high temperature in n-Hexane\cite{shi2013monodisperse}. Sizes of the particles were controlled by changing the concentration of the trisilane and the temperature of the
             reaction. The main disadvantages of these types of methods are the porosity and high hydrogen concentration of the particles and necessity of
             further processing if ordered nanostructures are required.
 
-        \subsubsection{\hlr{Thin-film dewetting}}
+        \subsubsection{\hlb{Thin-film dewetting}}
                 Thermal dewetting of thin films can be used to create arrays of nanoparticles, with size and phase controlled by the thickness of the intial
-            film and temperature of the process. If fabricated from an unpatterned film, the particles will be unordered~--- producing ordered particles is this
+            film and temperature of the process\cite{abbarchi2014wafer}. If fabricated from an unpatterned film, the particles will be unordered~--- producing ordered particles is this
             way requires an additional patterning of the the film, usually by lithographic processes, which increases the complexity of the process and the cost.
+
         \subsubsection{\hlr{Laser ablation-based methods}}
                 Laser ablation by focused ultra-short pulses can also be used to fabricated nanoparticles by heating up the irradiated area to eject material into
-            spherical particles deposited either near the irradiated area or transferred to another substrate. Control of the beam sport, fluency and donor material
+            spherical particles deposited either near the irradiated area or transferred to another substrate\cite{zywietz2014laser}. Control of the beam sport, fluency and donor material
             structure and be used to control individual particle size and the number of particles fabricated from a single pulse (down to one particle in best-case
             scenario). The ultra-short pulses can also be used to change the phase of already fabricated structures by means of light-induced thermal annealing.
+            \paragraph{\hlr{Femtosecond laser ablation}}
         \subsubsection{\hlr{Lithographic methods}}
                 Using electron beam lithography and reactive ion etching, one can pattern substrates with high-quality nanocylinders, with near-perfect
             control of both size and positioning of the structures. This give great flexibility in terms of fabricating ordered nanostructures, but at the
