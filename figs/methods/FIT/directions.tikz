@@ -1,16 +1,16 @@
 \begin{tikzpicture}
 
-    \draw[<->] (-1,0)--(1,0);
-    \draw[<->] (0,-1)--(0,1);
-    \draw[<->] (-0.7,-0.7)--(0.7,0.7);
+    \draw[->] (-1,0)--(1,0);
+    \draw[->] (0,-1)--(0,1);
+    \draw[<-] (-0.7,-0.7)--(0.7,0.7);
 
     \node[below] at (-0.7,-0.7) {$\vec{y}$};
     \node[above] at (0, 1) {$\vec{z}$};
     \node[right] at (1, 0) {$\vec{x}$};
 
-    \node at (1.2, 0) {E};
+    \node at (1.25, 0) {E};
     \node at (-1.2, 0) {W};
-    \node at (0, 1.2) {T};
+    \node at (0, 1.25) {T};
     \node at (0, -1.2) {B};
     \node at (0.9, 0.9) {N};
     \node at (-0.9, -0.9) {S};
