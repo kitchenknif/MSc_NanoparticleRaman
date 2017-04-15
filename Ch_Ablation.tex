@@ -63,9 +63,9 @@
         be heated to very high transient temperatures.
 
         \begin{align}
-           C_e &= C_0 T_e, \quad T_e \ll T_{Fermi} \equiv \frac{E_F}{k_B} \\
-           C_0 &= \frac{\pi^2 N_e k_B}{2T_F} \\
-           C &= \const, \quad T > \theta_{Debye}
+            C_e &= C_0 T_e, \quad T_e \ll T_{Fermi} \equiv \frac{E_F}{k_B} \\
+            C_0 &= \frac{\pi^2 N_e k_B}{2T_F} \\
+            C &= const, \quad T > \theta_{Debye}
         \end{align}
 
         The non-equilibrium thermal conductivity of electrons can be approximated by
@@ -78,7 +78,7 @@
 
             For femtosecond pulses, the characteristic cooling time of the hot electron gas due to energy exchange with the lattice
         is larger than the pulse duration, $\tau_l \ll \tau_e \equiv \frac{C_e}{\Gamma_{e-ph}}$. For
-        $t \ll \tau_e$ or $\Gamma_{e-ph}T_e \ll \frac{C_T_e}{t}$, electron-phonon coupling can be ignored. Another reasonable apporximation,
+        $t \ll \tau_e$ or $\Gamma_{e-ph}T_e \ll \frac{C_e T_e}{t}$, electron-phonon coupling can be ignored. Another reasonable apporximation,
         considering the thermal diffusivity of electrons $D_e = \frac{\kappa_e}{C_e}$, $D_e\tau_l < \alpha^{-2}$, is to ignore heat
         conduction by electrons. Then Eq.~\ref{ablation:e-heat} simplifies to:
 
@@ -102,7 +102,7 @@
 
         \begin{align}
             T &\approx \frac{\alpha \phi_a}{C}\exp(-\alpha z) \\
-            CT &= \int_0^T_e C_e(T_e')dT_e'
+            CT &= \int_0^{T_e} C_e(T_e')dT_e'
         \end{align}
 
         Significant ablation will occur if $CT \approx \Delta H_v$, where $\Delta H_v$ is the transition enthalpy. All of these approximations
