@@ -144,7 +144,7 @@
 	{
 		\presetkeys[#1]{mytitle}{
 			university = {Saint-Petersburg National Research University of Information Technology,\\ Mechanics and Optics},
-			faculty = {Faculty of Physics and Engineering},
+			faculty = {Faculty of Laser and Light Engineering},
 			city = {Saint-Petersburg},
 			year = {\the\year},
 			type = {diploma}
@@ -296,6 +296,15 @@
 \my@body14pt
 \newgeometry{a4paper,top=20mm,bottom=20mm,left=30mm,right=15mm,nohead,includeheadfoot}
 }
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 %% Каждая глава начинается с новой страницы, введение и заключение не
 %% нумеруются, но в оглавление входят. А само оглавление в оглавление не входит
