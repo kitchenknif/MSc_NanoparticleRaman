@@ -299,7 +299,8 @@
 
 \usepackage{titlesec}
 
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}

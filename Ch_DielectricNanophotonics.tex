@@ -1,9 +1,9 @@
 % !TeX spellcheck = english
 % !TEX root = thesis.tex
 \section{Dielectric Nanophotonics}
-\label{ch:Intro}
+\label{ch:DielectricNanophotoics}
 
-    \subsection{\hlb{Crystalline silicon as the material of choice for Dielectric Nanophotonics}}
+    \subsection{Crystalline silicon as the material of choice for Dielectric Nanophotonics}
             Crystalline silicon has been almost ubiquitously chosen as the material of choice for dielectric nanophotonics.
         There are several reasons for this. First, the material parameters are suitable for visible and infrared nanophotonic devices~---
         Crystalline silicon has a high refractive index, $n \approx 3.5$ at visible and IR wavelengths\cite{li1980refractive}, giving high contrast
@@ -15,22 +15,80 @@
         technologies, making it very easy (if expensive) to fabricate almost any required structure.
             \hlr{Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotnoic devices for medical applications.}
 
-            \hlr{TIE IN REQUIRED} Raman scattering of light is an important electromagnetic effect\cite{hayes2012scattering} that has a large number of applications:
+            Another interesting application dimension is related to the existence of and intristic Raman response in crystalline silicon. Raman
+        scattering of light, and inelastic scattering phenomenon, is an important electromagnetic effect\cite{hayes2012scattering} that has a large number of applications:
         sensing\cite{moskovits1985surface}, optical amplification\cite{islam2004wideband}, lasing\cite{pask2003design}.
         Traditionally, enhancement of Raman scattering for SERS applications has been mostly delegated to metallic nanoparticles, but
-        recent studies of high-index subwavelength nanoparticles have paved the way for all-dielectric resonant nanophotonic devices, incduling
+        recent studies of high-index subwavelength nanoparticles have paved the way for all-dielectric resonant nanophotonic devices, including
         the possibility of enhancing Raman scattering, including intristic Raman from the nanoparticles.
 
     \subsection{Analytical Models}
-        \subsubsection{\hlb{Mie-type resonances of dielectric nanoparticles}}
-        \subsubsection{\hlb{Raman scattering from crystalline materials}}
-        
+        \subsubsection{Mie-type resonances of dielectric nanoparticles}
+                An important problem for dieletric nanophotnoics is the scattering of eletromagnetic radiation by
+            a homogeneous sphere. This problem has an analyticial solution, generally called Mie theory\cite{mie1908beitrage}.
+            The solution of this problem utilizes the symmetry of the problem, and decomposes the scattered radiation into
+            vector spherical harmonics. The result is a set of coeffeicients, $a_i, b_i$ describing the relative contributions
+            of $a_i$, electric multipole resonances and $b_i$, magnetic multipole resonances into the final scattered field.
+
+                Based on this, one can easily estimate the extinction, scattering and absorbtion cross-sections (for a detailed
+                derivation, see Appendix \ref{ap:Mie}):
+
+            \begin{align}
+                C_{sca} &= \frac{2\pi}{k^2_m}\sum_{l=1}^\infty (2l +1)(|a_l|^2 + |b_l|^2)\\
+                C_{ext} &= \frac{2\pi}{k^2_m}\Re\sum_{l=1}^\infty (2l +1)(a_l + b_l)\\
+                C_{abs} &= C_{ext} - C_{sca}
+            \end{align}
+
+                The main limitation of the Mie solutions is their reliance on the symmetry of the scatterer~--- the solution can
+            be generalized to layered spheres, layered  infinite cyllinders, but scatterers lacking symmetry cannot be accurately described
+            by Mie-type solutions. In those cases, T-Matrix methods can be used, but they are outside the scope of this thesis.
+
+        \subsubsection{Raman scattering from crystalline materials}
+                Raman scattering of light from crystalline materials is inealstic scattering resulting from the interaction of optical phonons with
+            the incident light. Raman scattering is a versatile method of probing the phonon stucture of the materials.
+            A simplisitc classical model of Raman scattering is sufficient to demonstarte the effect and to properly predict many of the
+            Raman scattering peaks of semiconductors\cite{peter2010fundamentals}. In the model, interaction between light and phonons
+            is represented as a perturbation of the electric susceptibility $\chi$:
+
+            \begin{align}
+                \chi(\vec{k}_i, \omega_i, \vec{Q}) = \chi_0(\vec{k}_i, \omega_i) + \frac{\partial\chi}{\partial\vec{Q}}_0\vec{Q}(\vec{r},t) + ...
+            \end{align}
+
+            Where $Q$ represents the displacement of atoms in the lattice by phonons.
+            Then the induced polarization by the incident light, perturbed by the phonons can be written as
+
+            \begin{align}
+                \vec{P}_{ind}(\vec{r}, t, \vec{Q}) &= \frac{\partial\chi}{\partial\vec{Q}_0}\vec{Q}(\vec{r},t)
+                                                        \vec{F}_i(\vec{k}_i, \omega_i)\cos(\vec{k}_i\cdot\vec{r}-\omega_i t)
+            \end{align}
+            which contains both Stokes and anti-Stokes shifted components. The intensity of the Raman scattered light
+            is dependant on the polarization of the incident light and the phonon structure of the material. All of this
+            information can be condensed into a second rank Raman tensor:
+
+            \begin{align}
+                \hat{R} &= \frac{\partial\chi}{\partial\vec{Q}}\vec{Q}_n \\
+                I_s &\propto | \vec{e}_i \cdot \hat{R} \cdot\vec{e}_s|^2
+            \end{align}
+
+            A more detailed derviation can be found in Appendix \ref{ap:Raman}.
+
     \subsection{Numerical Models}
+            Since scattering from arbitrarily-shaped particles cannot be analytically described, use of numerical modelling methods
+        is required to model these particles. A large number of numerical methods exist that can be used for these purposes.
+
         \subsubsection{\hlb{Discrete Dipole Approximation}}
+            The discrete dipole approximation is a method of numerically simulating light scattering from arbitrarily shaped particles.
+            The general idea of the method is to replace an arbirtarily shaped scatterer by a set of point dipoles and calculate the
+            scattering by each dipole on its one plus the interaction between the dipoles. This makes calculations straightforward
+            for scatterers of arbitrary geometries and compositions.
+
+
         \subsubsection{Finite Element Method}
-        \subsubsection{Method of Moments}
+
         \subsubsection{Bondary Element Method}
-        \subsubsection{\hlb{Finite Integration Technique}}
+
+        \subsubsection{Finite Integration Technique}
+
         \subsubsection{Finite Difference Time Domain}
 
     \subsection{\hlb{Fabrication of Dielectric Nanoparticles}}
@@ -67,40 +125,28 @@
             cost of extreme complexity and high costs.
 
     \subsection{Experimental Characteriztion Methods}
-    \label{sec:SEM}
-            The geometrical parameters of the fabricated particles were measured by Scanning Electron Microscopy (SEM),
-        Transmission Electron Microscopy (TEM).
-
-        \subsubsection{\hlb{Scanning Electron Microscopy}}
-                Scanning electron microscopy (SEM, Carl Zeiss, Neon 40), registering backscattered electrons, was used
-            determine the geometrical parameters of the nanoparticles. In particular, that the particles possess \hlr{axial}
-            symmetry along the substrate normal (Fig.~\ref{fig:Crystallinity}B).
-
-        \subsubsection{\hlb{Transmission Electron Microscopy}}
-                We used specimen grids (3-mm-diameter, 200-mesh copper grids, coated on one side with a 20-nm-thick film
-            of amorphous carbon) to collect nanoparticles ablated from the a-Si:H film. The size, structure, and composition
-            of the collected nanoparticles were determined using bright and dark field TEM imaging, see the inset in
-            Fig.~\ref{fig:Crystallinity}B. The analysis of the electron diffraction pattern from several nanoparticles shows clear maxima,
-            corresponding to certain crystalline planes (Fig.~\ref{fig:Crystallinity}C). \hlr{Because the specimen grids were uneven, the
-            nanoparticles were deposited at different angles to the substrate meaning that} TEM imaging also provides information
-            on the oblateness of the particles along the direction perpendicular to the substrate surface, giving
-            the average ellipticity about $a_{\parallel}/a_{\perp}\approx$1.12, where $a_{\parallel}$($a_{\perp}$) is
-            the particle semi-major (semi-minor) axis oriented parallel (perpendicular) to the surface of the substrate.
+        \subsubsection{Electron Microscopy}
+            \label{sec:ElectronMicroscopy}
+                    The geometrical parameters of the fabricated particles were measured by Scanning Electron Microscopy (SEM),
+                Transmission Electron Microscopy (TEM).
+            \paragraph{Scanning Electron Microscopy}
+            \paragraph{Transmission Electron Microscopy}
 
         \subsubsection{Optical characterization}
-        \subsubsection{Scanning probe methods}
+            \paragraph{Elastic Scattering}
+            \paragraph{Inelastic Scattering}
 
-    \subsection{\hlb{Goals}}
+        \subsubsection{Scanning probe methods}
+            \paragraph{Near-field Scanning Optical Microscopy}
+
+
+    \subsection{Goals}
             The goals of this project were to:
             \begin{itemize}
-                \item develop a simple, single-stage femtosecond laser ablation method of frabricating crystallline silicon nanoparticles
-                \item demonstrate resonant inelastic, Raman, scattering from the nanoparticles
+                \item Implement the Discrete Dipole Approximation method to calcualte scattering cross-sections of dielectric particles
+                \item Develop a simple, single-stage femtosecond laser ablation method of frabricating crystallline silicon nanoparticles
+                \item Carry out optical characterization through single-particle polarization-resolved scattering experiments
+                \item Determine the sizes of the particles based on the spectral positions of the Mie-type resonances of the particles
+                \item Perform single-particle Raman spectroscopy experiments to prove crystallinity
+                \item Study the  influence of Mie resonances on Raman scattering from particles.
             \end{itemize}
-
-    %            \begin{figure}[h!]
-    %    				\begin{center}
-    %    					%\includegraphics[width=0.5\textwidth]{figs/intro/}
-    %    				\end{center}
-    %                    \label{fig:Lithography}
-    %                    \caption{a. Schematic of lithographic process and b. SEM image of possible structure}
-    %            \end{figure}
