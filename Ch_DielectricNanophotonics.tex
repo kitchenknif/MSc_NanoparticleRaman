@@ -73,17 +73,29 @@
             A more detailed derviation can be found in Appendix \ref{ap:Raman}.
 
     \subsection{Numerical Models}
-            Since scattering from arbitrarily-shaped particles cannot be analytically described, use of numerical modelling methods
+            Since scattering from arbitrarily-shaped particles cannot be analytically described, use of numerical modeling methods
         is required to model these particles. A large number of numerical methods exist that can be used for these purposes.
 
         \subsubsection{\hlb{Discrete Dipole Approximation}}
-            The discrete dipole approximation is a method of numerically simulating light scattering from arbitrarily shaped particles.
-            The general idea of the method is to replace an arbirtarily shaped scatterer by a set of point dipoles and calculate the
+                The discrete dipole approximation (DDA) is a method of numerically simulating light scattering from arbitrarily shaped particles.
+            The general idea of the method is to replace an arbitrarily shaped scatterer by a set of point dipoles and calculate the
             scattering by each dipole on its one plus the interaction between the dipoles. This makes calculations straightforward
-            for scatterers of arbitrary geometries and compositions.
+            for scatterers of arbitrary geometries and compositions. Using this assumption, the extinction and absorption cross-section
+            are represented by simple sums, iterating over all of the point dipoles, using the polarization of each dipole and the field at
+            the location of the dipole:
 
+            \begin{align}
+                C_{abs} &= 4\pi k \sum_i V_i \Im(\chi_i)|\vec{E}_i|^2 = 4\pi k \sum_i \Im(\vec{P}_i\vec{E}_i^*) \\
+                C_{ext} &= 4\pi k \sum_i \Im (\vec{P}_i\cdot\vec{E}_i^{inc*})
+            \end{align}
+
+                The main disadvantage of this method is staircase errors, caused by based approximation of ellipsoidal boundaries by a point-dipole
+            model on a Cartesian grid. The only real solution is to increase the number of dipoles used to simulate the scatterer, with quickly increases
+            computation time. Another difficulty is including surface interaction, which adds another interaction term to the solution, and further
+            complicates the computation. A detailed derivation of the basic DDA is provided in Appendix \ref{ap:DDA}.
 
         \subsubsection{Finite Element Method}
+
 
         \subsubsection{Bondary Element Method}
 
