@@ -95,34 +95,56 @@
             complicates the computation. A detailed derivation of the basic DDA is provided in Appendix \ref{ap:DDA}.
 
         \subsubsection{Finite Element Method}
-
-
-        \subsubsection{Bondary Element Method}
-
-        \subsubsection{Finite Integration Technique}
+                The Finite Element Method (FIT) is a numerical technique, first introduced in the 1940s\cite{courant1994variational}, to
+            find approximate solutions to boundary-value problems. The technique has been used in many fields, from mechanical structure
+            problems to electromagnetic field propagation.
+                The idea of the method is to reaplace a continous domain by a number of sub-domains, in each of which the solution is
+            approximated by interpolation functions. A linear system of algebraic equations is obtained by applying continuity boundary conditions
+            on the internal sub-domains and problem-specific boundary conditions on the external subdomains. The system can then be solved
+            by any solver for linear systems. The subdomains are generally chosen to be tetrahedra or hexahedra for three-dimensional solutions
+            with the internal fields approximated by picewise polynomial functions, but, in general, the method has no limitations on the
+            shape and size of the subdomains and the approximation functions inside each of the subdomains. This allows the method
+            to accurately model complicated scattering geometries. The flip side of this flexibility~--- large space requirements for
+            the system of equations. The method also often requires iterative refinement of the grid to achieve good convergence.
 
         \subsubsection{Finite Difference Time Domain}
+                The Finitie Difference Time Domain (FDTD) method is very straightforward technique to solve the propagation of electromagnetic
+            radiation, first developed by Yee\cite{yee1966numerical}. The method approximates both spatial and temporal derivates in the Maxwell's
+            eqations by finite-difference expressions. The standard implementation does this on a staggered Cartesian grid, with the electric field
+            defined on one sub-grid and the magnetic field defined on the second sub-grid. This results in a system of linear equations, where
+            each time step is used to calculate the electric field on the first sub-grid from the magentic field on the second sub-grid, and then
+            the magnetic field at the next time step from the electric field, and so on, until a termination condition is reached.
+                The main advantage of this method is its simplicity~--- no matrix solvers required, possibility for very efficient implementations.
+            The disadvantage is that this simplicity makes the method very rigid in terms of time step and spatial step choices for good convergence,
+            to mitigate staircase-type errors caused by inefficient mapping of complex scatterer geometry onto a Cartesian grid.
 
-    \subsection{\hlb{Fabrication of Dielectric Nanoparticles}}
+        \subsubsection{Finite Integration Technique}
+                The Finite Integration Technique (FIT)\cite{wieland1977discretization}, is idealogically similar to the FDTD method, but works with the
+            integral formulation of Maxwell's equations instead of the derivative formulation used by the FDTD. This grants the method more flexibility
+            in grid geometry, allowing for more accurate modelling of complicated scatters. The accuracy of the method, like with FDTD,
+            is still highly dependent on the choice of grid size and time step.
+                A detailed derivation for a simplistic case, with a Cartesian grid, can be found in Appendix \ref{ap:FIT}.
+
+    \subsection{Fabrication of Dielectric Nanoparticles}
             There are several techniques to fabricate dielectric nanoparticles. They can be ordered in terms of level of control over the size
         of the particles and the options of building patterned nanostructures for the nanoparticles. Complexity and cost of the processes generally
         correlate with the level of control provided by the different techniques.
             The main techniques can be grouped into: chemical synthesis\cite{shi2012new}, thin-film dewetting\cite{abbarchi2014wafer},
         laser ablation-based\cite{zywietz2014laser} and lithographic methods.
 
-        \subsubsection{\hlb{Chemical synthesis}}
+        \subsubsection{Chemical synthesis}
                 Chemical vapor deposition of silicon from disilane gas has been used to fabricate silicon nanoparticles, ($Si_2H_6 \rightarrow 2Si + 3H_2$ at
             high temperatures) achieving polycrystalline spherical particles\cite{shi2012new}. Monodisperse colloidal particles have been fabricated from trisilane ($Si_3H_8$)
             at high temperature in n-Hexane\cite{shi2013monodisperse}. Sizes of the particles were controlled by changing the concentration of the trisilane and the temperature of the
             reaction. The main disadvantages of these types of methods are the porosity and high hydrogen concentration of the particles and necessity of
             further processing if ordered nanostructures are required.
 
-        \subsubsection{\hlb{Thin-film dewetting}}
+        \subsubsection{Thin-film dewetting}
                 Thermal dewetting of thin films can be used to create arrays of nanoparticles, with size and phase controlled by the thickness of the intial
             film and temperature of the process\cite{abbarchi2014wafer}. If fabricated from an unpatterned film, the particles will be unordered~--- producing ordered particles is this
             way requires an additional patterning of the the film, usually by lithographic processes, which increases the complexity of the process and the cost.
 
-        \subsubsection{\hlb{Laser ablation-based methods}}
+        \subsubsection{Laser ablation-based methods}
                 Laser ablation by focused ultra-short pulses can also be used to fabricated nanoparticles by heating up the irradiated area to eject material into
             spherical particles deposited either near the irradiated area\cite{kuznetsov2012magnetic} or transferred to another substrate\cite{zywietz2014laser}. Control of the beam sport, fluency and donor material
             structure and be used to control individual particle size and the number of particles fabricated from a single pulse (down to one particle in best-case
@@ -131,34 +153,44 @@
                 The shortcomings of the current methods are that they often require additional annealing to crystallize the fabricated nanoparticles and that
             method presented in \cite{zywietz2014laser} is limited to transferring nanoparticles to transparent substrates.
 
-        \subsubsection{\hlb{Lithographic methods}}
+        \subsubsection{Lithographic methods}
                 Using electron beam lithography and reactive ion etching, one can pattern substrates with high-quality nanocylinders, with near-perfect
             control of both size and positioning of the structures\cite{bakker2015magnetic}. This give great flexibility in terms of fabricating ordered nanostructures, but at the
             cost of extreme complexity and high costs.
 
     \subsection{Experimental Characteriztion Methods}
         \subsubsection{Electron Microscopy}
-            \label{sec:ElectronMicroscopy}
-                    The geometrical parameters of the fabricated particles were measured by Scanning Electron Microscopy (SEM),
-                Transmission Electron Microscopy (TEM).
-            \paragraph{Scanning Electron Microscopy}
+        \label{sec:ElectronMicroscopy}
+                Electron microscopy is a very high-resolution, down to single nanometer resolutions, method to probe geometrical and
+            material parameters of structures. The structure is probed by a focused electron beam, measuring either scattered or transmitted
+            primary electrons, secondary electrons or emitted photons. Because of chrage accumulation caused by the electron beam, samples
+            usually need to be conductive to facilitate charge draining, or else the resulting signal will be distorted.
+                The two main methods used are scanning electron microscopy (SEM) and transmission electron microscopy (TEM).
+
             \paragraph{Transmission Electron Microscopy}
 
+            \paragraph{Scanning Electron Microscopy}
+
         \subsubsection{Optical characterization}
+        \label{sec:OpticalCharacterization}
             \paragraph{Elastic Scattering}
             \paragraph{Inelastic Scattering}
 
         \subsubsection{Scanning probe methods}
+        \label{sec:SPM}
             \paragraph{Near-field Scanning Optical Microscopy}
 
 
     \subsection{Goals}
+            The project was devoted to the fabrication as well as the characterization of elastic and inelastic scattering from resonant crystalline
+        silicon nanoaprticles.
+
             The goals of this project were to:
-            \begin{itemize}
-                \item Implement the Discrete Dipole Approximation method to calcualte scattering cross-sections of dielectric particles
-                \item Develop a simple, single-stage femtosecond laser ablation method of frabricating crystallline silicon nanoparticles
-                \item Carry out optical characterization through single-particle polarization-resolved scattering experiments
-                \item Determine the sizes of the particles based on the spectral positions of the Mie-type resonances of the particles
-                \item Perform single-particle Raman spectroscopy experiments to prove crystallinity
-                \item Study the  influence of Mie resonances on Raman scattering from particles.
-            \end{itemize}
+        \begin{itemize}
+            \item Implement the Discrete Dipole Approximation method to calcualte scattering cross-sections of dielectric particles
+            \item Develop a simple, single-stage femtosecond laser ablation method of frabricating crystallline silicon nanoparticles
+            \item Carry out optical characterization through single-particle polarization-resolved scattering experiments
+            \item Determine the sizes of the particles based on the spectral positions of the Mie-type resonances of the particles
+            \item Perform single-particle Raman spectroscopy experiments to prove crystallinity
+            \item Study the  influence of Mie resonances on Raman scattering from particles.
+        \end{itemize}
