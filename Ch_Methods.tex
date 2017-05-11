@@ -127,10 +127,10 @@
         the point $\mathbf{r}_0$ is presented in the form:
         %
         \begin{align} %Final collected signal
-              S\left( {{{\mathbf{r}}_0}} \right) = \sum\limits_j {\left\langle {{\mathbf{E}}_s^*\left( {{{\mathbf{r}}_0}} \right){{\mathbf{E}}_s}\left( {{{\mathbf{r}}_0}} \right)} \right\rangle }  = \sum\limits_j {\frac{{\omega _s^4}}
-            {{{c^4}}}\iint\limits_V {{d^3}{{\mathbf{r}}_1}{d^3}{{\mathbf{r}}_2}\left\langle {\hat G_s^*\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_1}} \right){\mathbf{P}}_s^*\left( {{{\mathbf{r}}_1}} \right){{\hat G}_s}\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_2}} \right){{\mathbf{P}}_s}\left( {{{\mathbf{r}}_2}} \right)} \right\rangle }}  \\
-               = \sum\limits_j {\frac{{\omega _s^4}}
-            {{{c^4}}}\iint\limits_V {{d^3}{{\mathbf{r}}_1}{d^3}{{\mathbf{r}}_2}\hat G_s^*\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_1}} \right){\mathbf{E}}_{exc}^*\left( {{{\mathbf{r}}_1}} \right){{\hat G}_s}\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_2}} \right){{\mathbf{E}}_{exc}}\left( {{{\mathbf{r}}_2}} \right)\chi _s^2\left\langle {\hat \alpha _j^*\left( {{{\mathbf{r}}_1}} \right) \otimes {{\hat \alpha }_j}\left( {{{\mathbf{r}}_2}} \right)} \right\rangle }},
+            S\left( {{{\mathbf{r}}_0}} \right)
+                =  \sum\limits_j {\left \langle{{\mathbf{E}}_s^*\left( {{{\mathbf{r}}_0}} \right){{\mathbf{E}}_s}\left( {{{\mathbf{r}}_0}} \right)} \right\rangle}
+                = \sum\limits_j {\frac{{\omega _s^4}}{{{c^4}}}\iint\limits_V {{d^3}{{\mathbf{r}}_1}{d^3}{{\mathbf{r}}_2}\left\langle {\hat G_s^*\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_1}} \right){\mathbf{P}}_s^*\left( {{{\mathbf{r}}_1}} \right){{\hat G}_s}\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_2}} \right){{\mathbf{P}}_s}\left( {{{\mathbf{r}}_2}} \right)} \right\rangle }}  \\
+                = \sum\limits_j {\frac{{\omega _s^4}}{{{c^4}}}\iint\limits_V {{d^3}{{\mathbf{r}}_1}{d^3}{{\mathbf{r}}_2}\hat G_s^*\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_1}} \right){\mathbf{E}}_{exc}^*\left( {{{\mathbf{r}}_1}} \right){{\hat G}_s}\left( {{{\mathbf{r}}_0},{{\mathbf{r}}_2}} \right){{\mathbf{E}}_{exc}}\left( {{{\mathbf{r}}_2}} \right)\chi _s^2\left\langle {\hat \alpha _j^*\left( {{{\mathbf{r}}_1}} \right) \otimes {{\hat \alpha }_j}\left( {{{\mathbf{r}}_2}} \right)} \right\rangle }},
             \label{eq4}
         \end{align}
         %
@@ -208,19 +208,33 @@
 
     \subsection{\hlb{Numerical Methods}}
     \label{sec:Numeric}
-        Several numerical methods were used to simulate the scattering properties of our fabricated nanoparticles~--- to prove their
+        Several numerical methods were used to simulate the scattering properties of the fabricated nanoparticles~--- to prove their
         crystalline phase, to probe their shape, to determine their size. The initial idea was to use the Discrete Dipole Approximation,
         because it is very flexible and can work with scatterers of arbitrary geometry. The main problem we encountered was the fact
         the method is very involved (especially if one tries to incoroprate substrate interaction), and computationally intensive for
         our problems. Therefore, for most of the calculations presented in this thesis, we used the CST Microwave Studio, which is a
-        EM simulation package that uses the Finite Integration Technique for most of its calculations. Being a CAD-based product, it
-        allowed us to substantially decrease modelling time for our calculations (even though for such simple calcualtions a simpler
+        EM simulation package that uses the Finite Integration Technique for most of its calculations. Being a Computer Aided Design-based (CAD) product,
+        it substantially decreased modelling time for the calculations (even though for such simple calcualtions a simpler
         method would have been more fitting). Also, many calculations turned out to be excessvie~-- a simple Mie theory calculation,
-        while simulating the incorrect geometry, was more than enough to model the required parameters, with error well within our
+        while simulating the incorrect geometry, was more than enough to model the required parameters, with error well within the
         requirements.
 
         \subsubsection{\hlb{Discrete Dipole Approximation}}
         \label{subsec:DDA}
+
+                For the DDA calculations, a custom, Python-based implementation was written, PyDDA~--- a reimplementation of an existing
+            Matlab toolkit, DDA-SI\cite{loke2011discrete}. The implementation even included surface-interaction components in its' calcualations,
+            but the complexity of the calcualation and difficulty of accurately modelling particles led to the DDA being abandoned in favor of a more
+            integrated, CAD-based approach.
+
+            \begin{figure}[h!]
+                \begin{center}
+                    \includegraphics[width=0.5\textwidth]{figs/intro/TheoryEnhancement.eps}
+                \end{center}
+                \caption{Log plot of normalized intensity of Raman scattering as a function of dimensionless nanoparticle diameter for the magnetic dipole (MD),
+                electric dipole (ED), magnetic quadrupole (MQ) and electric quadrupole (EQ) resonances.}
+                \label{fig:TheoryEnhancement}
+            \end{figure}
 
         \subsubsection{\hlb{Finite Integration Technique}}
         \label{subsec:FIT}
