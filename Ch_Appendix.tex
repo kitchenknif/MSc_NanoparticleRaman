@@ -2,10 +2,10 @@
 % !TEX root = thesis.tex
 \section{Mie Scattering of Light}
 \label{ap:Mie}
-    An important problem for dieletric nanophotnoics is the scattering of eletromagnetic radiation by
-    a homogeneous sphere. This problem has an analyticial solution, generally called Mie theory\cite{mie1908beitrage}. The following
+    An important problem for dielectric nanophotonics is the scattering of electromagnetic radiation by
+    a homogeneous sphere. This problem has an analytical solution, generally called Mie theory\cite{mie1908beitrage}. The following
     is a condensed version of the solution, following the presentation from Ref. \cite{ng2000manipulation}.
-    We will assume an x-polarised incident wave with amplitude $E_0$, propagation constant $\beta_0$ travelling in the $z$ direction:
+    We will assume an x-polarized incident wave with amplitude $E_0$, propagation constant $\beta_0$ traveling in the $z$ direction:
 
     \begin{align}
         \vec{E}_{inc} = E_0 e^{i\beta_0z}\hat{x}
@@ -42,7 +42,7 @@
         With $k_m$ as the wave vector in the surrounding medium. The final aim of this derivation is to get vector solutions
         of the wave equations. We begin by
         \begin{itemize}
-            \item Transitioning to a spherical coordinate system ${r, \theta, \phi}$, since our system is spherically symmertical
+            \item Transitioning to a spherical coordinate system ${r, \theta, \phi}$, since our system is spherically symmetrical
             \item Defining a scalar function $\psi_{l,m}$
             \item Defining a constant vector $\vec{r}$
         \end{itemize}
@@ -61,7 +61,7 @@
         \end{align}
 
         All solutions satisfy the wave equations. $\vec{N}_{l,m}$ and $\vec{M}_{l,m}$ are solenoidal functions and are rotors of each other,
-        like $\vec{H}$ and $\vec{E}$. $\vec{L}$, on the other hand is purely longitudal, so we omit it in this analysis.
+        like $\vec{H}$ and $\vec{E}$. $\vec{L}$, on the other hand is purely longitudinal, so we omit it in this analysis.
 
     \subsection{Scalar Solution}
 
@@ -72,13 +72,13 @@
                 + \frac{1}{r^2\sin^2(\theta)}\frac{\partial^2\psi}{\partial\phi^2} + k^2_m\psi = 0
         \end{align}
 
-        Next, we seek a solutions that sepratates the variables:
+        Next, we seek a solutions that separates the variables:
 
         \begin{align}
             \psi(r,\theta,\phi) &= R(r)\Theta(\theta)\Phi(\phi)
         \end{align}
 
-        Defining constants $m, Q$, we seprate the components into separate solutions:
+        Defining constants $m, Q$, we separate the components into separate solutions:
 
         \begin{align}
             \frac{d^2\Phi}{d\phi^2} + m^2\Phi &= 0 \\
@@ -109,7 +109,7 @@
             p &= k_m r
         \end{align}
 
-        Where $Z_l(p)$ represents the radial spherical Bessl $j_l(p)$ or first order Hankel $h_l(p)$. $h_l(p)$, being infinite in
+        Where $Z_l(p)$ represents the radial spherical Bessel $j_l(p)$ or first order Hankel $h_l(p)$. $h_l(p)$, being infinite in
         the far field are used to represent an outgoing spherical wave pattern for the scattered field. $j_l(p)$ is finite in the
         origin, so it is a correct representation of incident and transmitted fields.
 
@@ -163,7 +163,7 @@
             \vec{A} = \frac{i}{\omega}\sum_{l,m}\left(A_{l,m}\vec{M}_{l,m}+B_{l,m}\vec{N}_{l,m}\right)
         \end{align}
 
-        Since $\vec{M}_{l,m}$ and $\vec{N}_{l,m}$ are solenoidal function that correspond to interdependece of $\vec{H}$ and $\vec{E}$, using $\vec{A}$:
+        Since $\vec{M}_{l,m}$ and $\vec{N}_{l,m}$ are solenoidal function that correspond to interdependence of $\vec{H}$ and $\vec{E}$, using $\vec{A}$:
 
         \begin{align}
             \vec{H}_{inc} &= \frac{1}{i\omega \mu}\nabla \times \vec{A} \\
@@ -215,7 +215,7 @@
             H_{inc,\phi} + H_{scat,\phi} &= H_{int, \phi}
         \end{align}
 
-        Which, substiuting the vector spherical harmonics, gives:
+        Which, substituting the vector spherical harmonics, gives:
 
         \begin{align}
             j_l(N\xi)c_l + h_l(\xi)b_l&=j_l(\xi)\\
@@ -224,7 +224,7 @@
             [N\xi j_l(N\xi)]'d_l +N[\xi h_l(\xi)]'a_l &= N[\xi j_l(\xi)]'
         \end{align}
 
-        which gives us the the stanard expressions for the Mie coefficients:
+        which gives us the the standard expressions for the Mie coefficients:
 
         \begin{align}
             a_l &= \frac{N^2 j_l(N\xi)[\xi j_l(\xi)]' - j_l(\xi)[N\xi j_l(N \xi)]'}{N^2 j_l(N\xi)[\xi h_l(\xi)]' - h_l(\xi)[N\xi j_l(N \xi)]'}\\
@@ -254,7 +254,7 @@
                                            + E_{sca,\theta} \times H^*_{inc,\phi}\right)r^2\sin(\theta)d\theta d\phi
         \end{align}
 
-        Which can be simlified to
+        Which can be simplified to
 
         \begin{align}
             C_{sca} &= \frac{2\pi}{k^2_m}\sum_{l=1}^\infty (2l +1)(|a_l|^2 + |b_l|^2)\\
@@ -266,12 +266,12 @@
 
 \section{Raman Scattering from Crystalline Materials}
 \label{ap:Raman}
-    Raman scattering of light from crystalline materials is a versatile method of probing the phonon stucture of the materials.
-    A simplisitc classical model of Raman scattering is sufficient to demonstarte the effect and to properly predict many of the
+    Raman scattering of light from crystalline materials is a versatile method of probing the phonon structure of the materials.
+    A simplistic classical model of Raman scattering is sufficient to demonstrate the effect and to properly predict many of the
     Raman scattering peaks of semiconductors\cite{peter2010fundamentals}.
 
     We start with an infinite medium with electric susceptibility $\chi$. For simplicity, let us assume that the medium is isotropic
-    and that the susceptibility is scalar. A plane sinusodial wave is present in the medium, inducing sinusodial polarization:
+    and that the susceptibility is scalar. A plane sinusoidal wave is present in the medium, inducing sinusoidal polarization:
     \begin{align}
         \vec{F}(\vec{r}, t) &= \vec{F}_i(\vec{k}_i, \omega_i)\cos(\vec{k}_i\cdot\vec{r} - \omega_i t) \\
         \vec{P}(\vec{r}, t) &= \vec{P}(\vec{k}_i, \omega_i)\cos(\vec{k}_i\cdot\vec{r} - \omega_i t) \\
@@ -315,7 +315,7 @@
                                 + \cos((\vec{q} - \vec{k}_i)\cdot\vec{r} + (\omega_0 - \omega_i) t)) \right)
     \end{align}
 
-    $\vec{P}_{ind}$ contains two sinusodial waves - a Stokes shifted ($\omega_S = \omega_0 - \omega_i, \vec{k}_S = \vec{k}_i - \vec{q}$) and an
+    $\vec{P}_{ind}$ contains two sinusoidal waves - a Stokes shifted ($\omega_S = \omega_0 - \omega_i, \vec{k}_S = \vec{k}_i - \vec{q}$) and an
     anti-Stokes shifted wave ($\omega_A = \omega_0 - \omega_i, \vec{k}_A = \vec{k}_i - \vec{q}$). This produces Stokes and anti-Stokes scattered
     light, with the difference in frequency from the original wave know as the Raman shift.
 
@@ -333,7 +333,7 @@
     \end{align}
 
     This approximates $\vec{q} = 0$ for single phonon scattering. $\frac{\partial\chi}{\partial\vec{Q}}$ is a third-rank tensor with
-    complex components. Introducing $\vec{Q}_n = \vec{Q}/|\vec{Q}|$, a unit vector in the direction of the phonon diplacement, we can
+    complex components. Introducing $\vec{Q}_n = \vec{Q}/|\vec{Q}|$, a unit vector in the direction of the phonon displacement, we can
     define a complex second rank tensor,
 
     \begin{align}
@@ -341,7 +341,7 @@
         I_s &\propto | \vec{e}_i \cdot \hat{R} \cdot\vec{e}_s|^2
     \end{align}
 
-    $\hat{R}$ is tha Raman tensor, whose symmetry determines the symmetry of the material's Raman-active phonons. The symmetry of the
+    $\hat{R}$ is the Raman tensor, whose symmetry determines the symmetry of the material's Raman-active phonons. The symmetry of the
     Raman tensor depends on the symmetry of the medium and the active phonons.
 
 \clearpage
@@ -351,13 +351,13 @@
 
     \subsection{Generation of femtosecond laser pulses}
             Femtosecond laser pulse generation is usually done using chirped pulse amplification. A mode-locked seed laser is used
-        to generate a train of low-power femtosecond pulses, which are then temporally streched, amplified, compressed and output
+        to generate a train of low-power femtosecond pulses, which are then temporally stretched, amplified, compressed and output
         from the laser system. This is necessary, because the final, compressed femtosecond pulse can have extremely high peak power,
         which would damage the amplification system\cite{harilal2014femtosecond}.
-            The compression and streching is done by using dispersion to cause different wavelengths of light to travel different distances.
+            The compression and stretching is done by using dispersion to cause different wavelengths of light to travel different distances.
         This is usually accomplished using either two prisms and a mirror or two diffraction gratings and a mirror, though, using engineered
         dispersion in optical fibers is also possible\cite{harilal2014femtosecond}.
-            \hlr{Our femtosecond laser system, Femtosecond Oscillator TiF-100F by Avesta Poject, is a Ti:Sapphire laser pumped by a Nd:YLF fequency
+            \hlr{Our femtosecond laser system, Femtosecond Oscillator TiF-100F by Avesta Project, is a Ti:Sapphire laser pumped by a Nd:YLF frequency
         doubled laser, emitting laser pulses at a central wavelength of $800~\si{nm}$, with pulse duration of $100~\si{fs}$, and repetition
         frequency of $80~\si{MHz}$}.
 
@@ -368,7 +368,7 @@
 
             In metals and semiconductors having a large concentration of conduction band electrons, most of the light from the pulse is
         absorbed by conduction band electrons. The conduction band electrons thermalize within a timeframe of $10$fs-$1$ps, while thermalization
-        between the electrons and the lattice is much slowers, on the order of $1-100$ps, meaning that after the absorbtion of the laser pulse,
+        between the electrons and the lattice is much slower, on the order of $1-100$ps, meaning that after the absorbtion of the laser pulse,
         we have a non-equilibrium state of a hot electron gas at temperature $T_e$ and a cold lattice at $T$. \cite{bauerle2013laser}
 
         The evolution of the temperature of the electron gas and the lattice can be described by the following heat equations:
@@ -404,7 +404,7 @@
 
             For femtosecond pulses, the characteristic cooling time of the hot electron gas due to energy exchange with the lattice
         is larger than the pulse duration, $\tau_l \ll \tau_e \equiv \frac{C_e}{\Gamma_{e-ph}}$. For
-        $t \ll \tau_e$ or $\Gamma_{e-ph}T_e \ll \frac{C_e T_e}{t}$, electron-phonon coupling can be ignored. Another reasonable apporximation,
+        $t \ll \tau_e$ or $\Gamma_{e-ph}T_e \ll \frac{C_e T_e}{t}$, electron-phonon coupling can be ignored. Another reasonable approximation,
         considering the thermal diffusivity of electrons $D_e = \frac{\kappa_e}{C_e}$, $D_e\tau_l < \alpha^{-2}$, is to ignore heat
         conduction by electrons. Then Eq.~\ref{ablation:e-heat} simplifies to:
 
@@ -423,7 +423,7 @@
         \end{align}
 
         For times $t \geq \tau_l$, Equations \ref{ablation:heat} and \ref{ablation:e-heat}, with $Q = 0$ describe the evolution of the
-        two systems. The electron gas then rapidly dumps all the energy to the latice. Continuing to ignore heat conduction, the lattice
+        two systems. The electron gas then rapidly dumps all the energy to the lattice. Continuing to ignore heat conduction, the lattice
         temperature:
 
         \begin{align}
@@ -439,11 +439,9 @@
             \phi_{th} &= \frac{\Delta H_v}{\alpha A}
         \end{align}
 
-        This is a very crude approximation, that disregards energy transport by ballistic and diffusive electron propagation; lattice deformtions,
-        thermionic electron emition, etc... A more rigorous treatment would include lattice deformations caused by the heated electron gas. The
+        This is a very crude approximation, that disregards energy transport by ballistic and diffusive electron propagation; lattice deformation,
+        thermionic electron emission, etc... A more rigorous treatment would include lattice deformations caused by the heated electron gas. The
         deformation wave caused by the electron gas could cause the metal to fracture and ablate, without significant heating of the lattice itself.
-
-
 
         \hlb{SM: Please, add some short conclusion that fs-laser ablation allows for gentle removing of material from surface. Some estimation for silicon might be done. Also, you can say that there still no rigorous theoretical study on laser printing of Si nanoparticles from thin supported films. Indeed, it would require complicated 3D atomistic simulations coupled with hydrodynamic modeling [see recent works of Nail Inogamov for Au NPs formation].}
 
@@ -451,7 +449,7 @@
 \label{ap:DDA}
 
     The discrete dipole approximation is a method of numerically simulating light scattering from arbitrarily shaped particles.
-    The general idea of the method is to replace an arbirtarily shaped scatterer by a set of point dipoles and calculate the
+    The general idea of the method is to replace an arbitrarily shaped scatterer by a set of point dipoles and calculate the
     scattering by each dipole on its one plus the interaction between the dipoles. This makes calculations straightforward
     for scatterers of arbitrary geometries and compositions.
 
@@ -497,11 +495,11 @@
         \hat{L}(\partial V_0, vec{r}) = -\oint_{\partial V_0} d^2 r' \frac{\hat{n}'\hat{R}}{R^3}
     \end{align}
 
-    Where $\hat{n}'$ is an external normal to the surface of $V_0$, $\partial V_0$ at $\vec{r}'$. $\hat{L}$ is an always real, symmertic dyadic
+    Where $\hat{n}'$ is an external normal to the surface of $V_0$, $\partial V_0$ at $\vec{r}'$. $\hat{L}$ is an always real, symmetric dyadic
     with trace equal to $4\pi$. $\hat{L}$ does not depend on the size of the volume, only on its shape. $\hat{M}$ depends on the size of the
     volume and approaches $0$ when the size of the volume decreases.
 
-    The original integral equation is then discretisized:
+    The original integral equation is then discretized:
 
     \begin{align}
         V &= \bigcup^N_{i=1}V_i \\
@@ -554,8 +552,8 @@
         \hat{G}_{ij}^{approx} = \hat{G}(\vec{r}_i, \vec{r}_j)
     \end{align}
 
-    This assuumption is equivalent to replacing the initial scattering volume by a set of point dipoles. It is possible
-    to formulate the DDA with a weaker set of assumptions, but the greatly increses computational complexity.
+    This assumption is equivalent to replacing the initial scattering volume by a set of point dipoles. It is possible
+    to formulate the DDA with a weaker set of assumptions, but the greatly increases computational complexity.
 
     The DDA solves for exciting electric fields:
 
@@ -564,13 +562,13 @@
         \vec{E}_i^{self}&= \left(\hat{M}_i - \hat{L}_i \right)\chi_i\vec{E}_i
     \end{align}
 
-    Where $\vec{E}_i^{sefl}$ is the field induced by the subvolume on istefl. Then the original equation is equivalent to
+    Where $\vec{E}_i^{sefl}$ is the field induced by the subvolume on itself. Then the original equation is equivalent to
 
     \begin{align}
         \vec{E}_i^{inc} = \vec{E}_i^{exc} - \sum_{j\neq i}\hat{G}_{ij}\hat{\alpha}_j\vec{E}_j^{exc}
     \end{align}
 
-    where $\hat{\alpha}_i$ is the polarizability tesnor:
+    where $\hat{\alpha}_i$ is the polarizability tensor:
 
     \begin{align}
         \hat{\alpha}_i &= V_i\chi_i\left(\hat{I} + \left(\hat{L}_i - \hat{M}_i\right)\chi_i\right)^{-1}
@@ -583,7 +581,7 @@
         \vec{E}_i^{inc} = \hat{\alpha}_i^{-1}\vec{P}_i - \sum_{j \neq i} \hat{G}_{ij}\vec{P}_j
     \end{align}
 
-    This formulation turns out to be prefreable for numerical simulations.
+    This formulation turns out to be preferable for numerical simulations.
 
     Different formulations of the DDA use different approximations for the polarizability tensor $\hat{\alpha}$. The original
     formulation uses the Clausius-Mossoti polarizability:
@@ -592,9 +590,9 @@
         \hat{\alpha}_i = \hat{I}\alpha_i^{CM} = \hat{I}d^3\frac{3}{4\pi}\frac{\epsilon_i -1}{\epsilon_i + 2}
     \end{align}
 
-    After determining the internal field, we can calcualte the scattered fields and cross sections of the scatterer. The
+    After determining the internal field, we can calculate the scattered fields and cross sections of the scatterer. The
     scattered fields obtained by taking the limit $r \rightarrow \infty$ of the integral in the initial equation, from which
-    all of the DDA was dervied:
+    all of the DDA was derived:
 
     \begin{align}
         \vec{E}^{sca}(\vec{r}) &= \frac{e^{ikr}}{-ikr}\vec{F}(\vec{n}) \\
@@ -603,7 +601,7 @@
         \vec{n} &= \frac{\vec{r}}{r}
     \end{align}
 
-    Knowing $\vec{F}(\vec{n})$, any other necessary scattering properties can be calcualted. E.g. cross sections. For
+    Knowing $\vec{F}(\vec{n})$, any other necessary scattering properties can be calculated. E.g. cross sections. For
     an incident plane wave:
 
     \begin{align}
@@ -616,7 +614,7 @@
         C_{sca} = \frac{1}{k^2}\oint d\Omega \left|\vec{F}(\vec{n})\right|^2
     \end{align}
 
-    using internal fields, absorbtion and extinction cross sections:
+    using internal fields, absorption and extinction cross sections:
 
     \begin{align}
         C_{abs} &= 4\pi k \sum_i \int_{V_i} d^3r' \Im(\chi(\vec{r}'))\left|\vec{E}(\vec{r}')\right|^2\\
@@ -637,9 +635,9 @@
 
 \section{Finite Integration Technique}
 \label{ap:FIT}
-    The Finite Integration Technique (FIT) is a method for discretizing the Maxwell equations onto an abritrary
+    The Finite Integration Technique (FIT) is a method for discretizing the Maxwell equations onto an arbitrary
     grid\cite{weiland2001discrete}.  Because the FIT deals with the integral forms of the Maxwell equations, it,
-    Unlike the Finite-Difference Time-Domain (FDTD) methods, doesn't have any restrictions on the type of grid,
+    Unlike the Finite-Difference Time-Domain (FDTD) methods, does not have any restrictions on the type of grid,
     other than that it be homeomorphic to a simplicial complex.
 
     For the simplicity of the following derivation\cite{rahimi2011finite}, we will assume the cells of the grid to be brick shaped. In this
@@ -655,7 +653,7 @@
         \Omega_{s_z} &= ...
     \end{align}
 
-    These can be combined into 8 different three-dimensionsal grids, combining main ($c$) and staggered ($s$) grid points:
+    These can be combined into 8 different three-dimensional grids, combining main ($c$) and staggered ($s$) grid points:
 
     \begin{align}
         \Omega_{t_x, t_y, t_z} &= \Omega_{t_x}\times\Omega_{t_y}\times\Omega_{t_z}\\
