@@ -55,7 +55,7 @@
             These micro-patches are unstable at high temperatures and undergo dewetting to a certain number of similar
             nanoparticles~\cite{thompson2012solid}.
 
-
+    \clearpage
     \subsection{Optical Measurements}
             All of the optical characterization measurements were carried out on a multifuncational setup, depicted in
             Fig.~\ref{fig:expSetup}. The setup allowed us to measure optical signals from single nanoparticles, provided that
@@ -76,13 +76,20 @@
                     \label{fig:expSetup}
             \end{figure}
 
-
         \subsubsection{Polarization-Resolved Dark-field Spectroscopy of Single Nanoparticles}
             \label{sec:Darkfield}
                 For the dark-field scattering experiments, the nanoparticles were excited at an oblique angle of incidence
             (65 degrees to the surface normal) by linearly polarized light from a halogen lamp (HL--2000--FHSA)
             through a weakly-focusing objective (Mitutoyo M Plan Apo NIR, 10x, NA=0.28). The polarization allowed us to
             selectively excite different modes in the nanoparticles\cite{permyakov2015probing}.
+
+            \begin{figure}[!ht]
+                    \begin{center}
+                        \includegraphics[width=0.6\textwidth]{figs/methods/DF/id_52780.eps}
+                    \end{center}
+                    \caption{Different Mie-type resonances excited by different polarizations of incident light.}
+                    \label{fig:PolarizedDF}
+            \end{figure}
 
         \subsubsection{Raman Spectroscopy of Single Nanoparticles}
         \label{sec:Raman}
@@ -206,37 +213,60 @@
         the ED resonance.
 
 
-    \subsection{\hlb{Numerical Methods}}
+    \subsubsection{Numerical Methods}
     \label{sec:Numeric}
         Several numerical methods were used to simulate the scattering properties of the fabricated nanoparticles~--- to prove their
         crystalline phase, to probe their shape, to determine their size. The initial idea was to use the Discrete Dipole Approximation,
         because it is very flexible and can work with scatterers of arbitrary geometry. The main problem we encountered was the fact
         the method is very involved (especially if one tries to incoroprate substrate interaction), and computationally intensive for
-        our problems. Therefore, for most of the calculations presented in this thesis, we used the CST Microwave Studio, which is a
-        EM simulation package that uses the Finite Integration Technique for most of its calculations. Being a Computer Aided Design-based (CAD) product,
-        it substantially decreased modelling time for the calculations (even though for such simple calcualtions a simpler
-        method would have been more fitting). Also, many calculations turned out to be excessvie~-- a simple Mie theory calculation,
+        the required problems. Many calculations turned out to be excessvie~-- a simple Mie theory calculation,
         while simulating the incorrect geometry, was more than enough to model the required parameters, with error well within the
         requirements.
 
-        \subsubsection{\hlb{Discrete Dipole Approximation}}
+        For calculations of field distribution inside the nanoparticles presented in this thesis, CST Microwave Studio was used.
+        It is an  EM simulation package that uses the Finite Integration Technique for most of its calculations.
+
+        \subsubsection{Discrete Dipole Approximation}
         \label{subsec:DDA}
 
                 For the DDA calculations, a custom, Python-based implementation was written, PyDDA~--- a reimplementation of an existing
             Matlab toolkit, DDA-SI\cite{loke2011discrete}. The implementation even included surface-interaction components in its' calcualations,
-            but the complexity of the calcualation and difficulty of accurately modelling particles led to the DDA being abandoned in favor of a more
-            integrated, CAD-based approach.
+            but the complexity of the calcualation and difficulty of accurately modelling particles led to the DDA being abandoned in favor of plain
+            Mie theory, wich provided more than enough accuracy for the purposes of the project.
 
             \begin{figure}[h!]
-                \begin{center}
-                    \includegraphics[width=0.5\textwidth]{figs/intro/TheoryEnhancement.eps}
-                \end{center}
-                \caption{Log plot of normalized intensity of Raman scattering as a function of dimensionless nanoparticle diameter for the magnetic dipole (MD),
-                electric dipole (ED), magnetic quadrupole (MQ) and electric quadrupole (EQ) resonances.}
-                \label{fig:TheoryEnhancement}
+                \centering
+                \begin{subfigure}[b]{0.3\textwidth}
+                    \includegraphics[width=\textwidth]{figs/methods/DDA/n_33.pdf}
+                    \caption{}
+                \end{subfigure}~
+                \begin{subfigure}[b]{0.3\textwidth}
+                    \includegraphics[width=\textwidth]{figs/methods/DDA/n_257.pdf}
+                    \caption{}
+                \end{subfigure}~
+                \begin{subfigure}[b]{0.3\textwidth}
+                    \includegraphics[width=\textwidth]{figs/methods/DDA/n_515.pdf}
+                    \caption{}
+                \end{subfigure}
+                \caption{Scattering from isotropic sphere modelled by DDA using a) 33, b) 257, c) 515 dipoles to model the sphere.}
+                \label{fig:DDA_Dipole}
             \end{figure}
 
-        \subsubsection{\hlb{Finite Integration Technique}}
+        \clearpage
+        \subsubsection{Finite Integration Technique}
         \label{subsec:FIT}
+
+                CST Microwave studio was used to model field distribution inside and around the silicon nanoparticles, to
+            demonstrate the electric field confinement at different types of resonances (electric and magnetic dipole resonances).
+            The model was a slightly oblate spheroid, corresponding to the experimentally determined geometric parameters of the
+            nanoparticles.
+
+            \begin{figure}[!ht]
+                \centering
+                \includegraphics[width=0.7\textwidth]{figs/methods/FIT/CST.eps}
+                \caption{Field distribution inside 180nm spheroid nanoparticle with 1.12 oblateness parameter at electric and magnetic dipole resonances,
+                    calculated using CST Microwave Studio}
+                \label{fig:CST}
+            \end{figure}
 
 \clearpage
