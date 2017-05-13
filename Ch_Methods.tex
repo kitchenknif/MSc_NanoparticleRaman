@@ -14,8 +14,8 @@
         nanoparticles out of a thin film of amorphous silicon (adapted from a method used for plasmonic nanoparticles\cite{makarov2016controllable,
         dmitriev2016direct}), and a forward transfer of nanoparticles by single femtosecond laser pulses
         from a transparent substrate with a a thin film of amorphous silicon to an arbitrary acceptor substrate. The second method is
-        similar to the the one presented in \cite{zywietz2014laser}, but doesn't require any additional annealing steps to achieve
-        nanoparticle crystallinity and isn't limited to transparent acceptor substrates.
+        similar to the the one presented in \cite{zywietz2014laser}, but does not require any additional annealing steps to achieve
+        nanoparticle crystallinity and is not limited to transparent acceptor substrates.
 
         \begin{figure}[h!]
                 \begin{center}
@@ -38,7 +38,7 @@
                 The nanoparticles were fabricated by single laser pulses (from a previously undamaged surface of the a-Si:H film) in a
             forward-transfer geometry, where the receiving substrate is placed under the film with a spacing
             of $\sim 50~\si{\upmu m}$ (figure~\ref{fig:LaserPrinting}(a)). This geometry has an advantage over the back-transfer geometry
-            used in \cite{zywietz2014laser}, because of the possibility of transferign nanoparticles onto a wide variety of substrates,
+            used in \cite{zywietz2014laser}, because of the possibility of transferring nanoparticles onto a wide variety of substrates,
             including opaque and structured samples.
 
                 The silicon nanoparticles were printed at laser energies in the range of $0.5-1.2~\si{nJ}$, providing fluencies in
@@ -57,7 +57,7 @@
 
     \clearpage
     \subsection{Optical Measurements}
-            All of the optical characterization measurements were carried out on a multifuncational setup, depicted in
+            All of the optical characterization measurements were carried out on a multifunctional setup, depicted in
             Fig.~\ref{fig:expSetup}. The setup allowed us to measure optical signals from single nanoparticles, provided that
             there was at least $1\mu$ m between the nanoparticle and its nearest neighbors. The XYZ-stage used for the
             positioning of the particles had $100$nm precision, giving enough control to position a single nanoparticle into
@@ -95,7 +95,7 @@
         \label{sec:Raman}
                 For the Raman scattering experiments, the nanoparticles were excited by one of two laser sources: a $632.8$nm HeNe laser
             or a $532$nm Nd:YAG laser, through the same channel that was used to collect the scattered light. A lowpass filter was used
-            to filter out the excitaiton wavelength and leave only the Stokes-shifted inelastically scattered light.
+            to filter out the excitation wavelength and leave only the Stokes-shifted inelastically scattered light.
 
     \subsection{Analytical Model of Raman Signal Enhancement by Mie resonances of Nanoparticles}
         \label{sec:Theory}
@@ -168,7 +168,7 @@
             Expression~(\ref{eq5}) can be simplified with the use of the single-mode approximation. First, we notice that the
         electromagnetic response of an optically small Si nanoparticle at the excitation wavelength is dominated by a single
         magnetic or electric multipole resonance depending on the particle radius~\cite{evlyukhin2010optical}. Therefore, we can keep
-        only one resonant term in Eq.~(\ref{eq1}) and represent the electric field inside the nanopartice as ${
+        only one resonant term in Eq.~(\ref{eq1}) and represent the electric field inside the nanoparticle as ${
         {\mathbf{{E}}}_{exc}} \approx {E_n}{c_n}{\mathbf{M}}_{o1n}^{(1)}$, for the $n-$th magnetic resonance, and
         ${{\mathbf{{E}}}_{exc}}\approx -i{E_n}{d_n}{\mathbf{N}}_{e1n}^{(1)}$, for the $n-$th electric resonance,
         respectively. Furthermore, since the Raman shift in silicon is small compared to the linewidth $\gamma$ of
@@ -218,8 +218,8 @@
         Several numerical methods were used to simulate the scattering properties of the fabricated nanoparticles~--- to prove their
         crystalline phase, to probe their shape, to determine their size. The initial idea was to use the Discrete Dipole Approximation,
         because it is very flexible and can work with scatterers of arbitrary geometry. The main problem we encountered was the fact
-        the method is very involved (especially if one tries to incoroprate substrate interaction), and computationally intensive for
-        the required problems. Many calculations turned out to be excessvie~-- a simple Mie theory calculation,
+        the method is very involved (especially if one tries to incorporate substrate interaction), and computationally intensive for
+        the required problems. Many calculations turned out to be excessive~-- a simple Mie theory calculation,
         while simulating the incorrect geometry, was more than enough to model the required parameters, with error well within the
         requirements.
 
@@ -230,9 +230,9 @@
         \label{subsec:DDA}
 
                 For the DDA calculations, a custom, Python-based implementation was written, PyDDA~--- a reimplementation of an existing
-            Matlab toolkit, DDA-SI\cite{loke2011discrete}. The implementation even included surface-interaction components in its' calcualations,
-            but the complexity of the calcualation and difficulty of accurately modelling particles led to the DDA being abandoned in favor of plain
-            Mie theory, wich provided more than enough accuracy for the purposes of the project.
+            Matlab toolkit, DDA-SI\cite{loke2011discrete}. The implementation even included surface-interaction components in its' calculations,
+            but the complexity of the calculation and difficulty of accurately modeling particles led to the DDA being abandoned in favor of plain
+            Mie theory, which provided more than enough accuracy for the purposes of the project.
 
             \begin{figure}[h!]
                 \centering
@@ -248,7 +248,7 @@
                     \includegraphics[width=\textwidth]{figs/methods/DDA/n_515.pdf}
                     \caption{}
                 \end{subfigure}
-                \caption{Scattering from isotropic sphere modelled by DDA using a) 33, b) 257, c) 515 dipoles to model the sphere.}
+                \caption{Scattering from isotropic sphere modeled by DDA using a) 33, b) 257, c) 515 dipoles to model the sphere.}
                 \label{fig:DDA_Dipole}
             \end{figure}
 

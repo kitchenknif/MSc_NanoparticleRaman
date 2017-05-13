@@ -8,29 +8,29 @@
         There are several reasons for this. First, the material parameters are suitable for visible and infrared nanophotonic devices~---
         Crystalline silicon has a high refractive index, $n \approx 3.5$ at visible and IR wavelengths\cite{li1980refractive}, giving high contrast
         with air, and therefore good field confinement for resonant particles at those wavelengths\cite{mie1908beitrage, dmitriev2016resonant}. Also
-        a very important fact, distinguishing crystalline silicon from amorphous silicon, is the near-zero absorbtion at visible wavelengths, meaning
-        that crystalline silicon nanoparticles are nearly lossess at visible and IR wavelengths, making any potential nanophotonic devices very
+        a very important fact, distinguishing crystalline silicon from amorphous silicon, is the near-zero absorption at visible wavelengths, meaning
+        that crystalline silicon nanoparticles are nearly lossless at visible and IR wavelengths, making any potential nanophotonic devices very
         efficient and not prone to thermal dissipation~--- something that plagues their plasmonic counterparts.
-            Silicon, being the basis of almost all modern electronics, can easliy boast a highly developed ecosystem of fabrication and processing
+            Silicon, being the basis of almost all modern electronics, can easily boast a highly developed ecosystem of fabrication and processing
         technologies, making it very easy (if expensive) to fabricate almost any required structure.
-            \hlr{Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotnoic devices for medical applications.}
+            \hlr{Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotonic devices for medical applications.}
 
-            Another interesting application dimension is related to the existence of and intristic Raman response in crystalline silicon. Raman
+            Another interesting application dimension is related to the existence of and intrinsic Raman response in crystalline silicon. Raman
         scattering of light, and inelastic scattering phenomenon, is an important electromagnetic effect\cite{hayes2012scattering} that has a large number of applications:
         sensing\cite{moskovits1985surface}, optical amplification\cite{islam2004wideband}, lasing\cite{pask2003design}.
         Traditionally, enhancement of Raman scattering for SERS applications has been mostly delegated to metallic nanoparticles, but
         recent studies of high-index subwavelength nanoparticles have paved the way for all-dielectric resonant nanophotonic devices, including
-        the possibility of enhancing Raman scattering, including intristic Raman from the nanoparticles.
+        the possibility of enhancing Raman scattering, including intrinsic Raman from the nanoparticles.
 
     \subsection{Analytical Models}
         \subsubsection{Mie-Type Resonances of Dielectric Nanoparticles}
-                An important problem for dieletric nanophotnoics is the scattering of eletromagnetic radiation by
-            a homogeneous sphere. This problem has an analyticial solution, generally called Mie theory\cite{mie1908beitrage}.
+                An important problem for dielectric nanophotonics is the scattering of electromagnetic radiation by
+            a homogeneous sphere. This problem has an analytical solution, generally called Mie theory\cite{mie1908beitrage}.
             The solution of this problem utilizes the symmetry of the problem, and decomposes the scattered radiation into
-            vector spherical harmonics. The result is a set of coeffeicients, $a_i, b_i$ describing the relative contributions
+            vector spherical harmonics. The result is a set of coefficients, $a_i, b_i$ describing the relative contributions
             of $a_i$, electric multipole resonances and $b_i$, magnetic multipole resonances into the final scattered field.
 
-                Based on this, one can easily estimate the extinction, scattering and absorbtion cross-sections (for a detailed
+                Based on this, one can easily estimate the extinction, scattering and absorption cross-sections (for a detailed
                 derivation, see Appendix \ref{ap:Mie}):
 
             \begin{align}
@@ -40,13 +40,13 @@
             \end{align}
 
                 The main limitation of the Mie solutions is their reliance on the symmetry of the scatterer~--- the solution can
-            be generalized to layered spheres, layered  infinite cyllinders, but scatterers lacking symmetry cannot be accurately described
+            be generalized to layered spheres, layered  infinite cylinders, but scatterers lacking symmetry cannot be accurately described
             by Mie-type solutions. In those cases, T-Matrix methods can be used, but they are outside the scope of this thesis.
 
         \subsubsection{Raman Scattering from Crystalline Materials}
-                Raman scattering of light from crystalline materials is inealstic scattering resulting from the interaction of optical phonons with
-            the incident light. Raman scattering is a versatile method of probing the phonon stucture of the materials.
-            A simplisitc classical model of Raman scattering is sufficient to demonstarte the effect and to properly predict many of the
+                Raman scattering of light from crystalline materials is inelastic scattering resulting from the interaction of optical phonons with
+            the incident light. Raman scattering is a versatile method of probing the phonon structure of the materials.
+            A simplistic classical model of Raman scattering is sufficient to demonstrate the effect and to properly predict many of the
             Raman scattering peaks of semiconductors\cite{peter2010fundamentals}. In the model, interaction between light and phonons
             is represented as a perturbation of the electric susceptibility $\chi$:
 
@@ -62,7 +62,7 @@
                                                         \vec{F}_i(\vec{k}_i, \omega_i)\cos(\vec{k}_i\cdot\vec{r}-\omega_i t)
             \end{align}
             which contains both Stokes and anti-Stokes shifted components. The intensity of the Raman scattered light
-            is dependant on the polarization of the incident light and the phonon structure of the material. All of this
+            is dependent on the polarization of the incident light and the phonon structure of the material. All of this
             information can be condensed into a second rank Raman tensor:
 
             \begin{align}
@@ -70,7 +70,7 @@
                 I_s &\propto | \vec{e}_i \cdot \hat{R} \cdot\vec{e}_s|^2
             \end{align}
 
-            A more detailed derviation can be found in Appendix \ref{ap:Raman}.
+            A more detailed derivation can be found in Appendix \ref{ap:Raman}.
 
     \subsection{Numerical Models}
             Since scattering from arbitrarily-shaped particles cannot be analytically described, use of numerical modeling methods
@@ -98,30 +98,30 @@
                 The Finite Element Method (FIT) is a numerical technique, first introduced in the 1940s\cite{courant1994variational}, to
             find approximate solutions to boundary-value problems. The technique has been used in many fields, from mechanical structure
             problems to electromagnetic field propagation.
-                The idea of the method is to reaplace a continous domain by a number of sub-domains, in each of which the solution is
+                The idea of the method is to replace a continuous domain by a number of sub-domains, in each of which the solution is
             approximated by interpolation functions. A linear system of algebraic equations is obtained by applying continuity boundary conditions
             on the internal sub-domains and problem-specific boundary conditions on the external subdomains. The system can then be solved
             by any solver for linear systems. The subdomains are generally chosen to be tetrahedra or hexahedra for three-dimensional solutions
-            with the internal fields approximated by picewise polynomial functions, but, in general, the method has no limitations on the
+            with the internal fields approximated by piecewise polynomial functions, but, in general, the method has no limitations on the
             shape and size of the subdomains and the approximation functions inside each of the subdomains. This allows the method
             to accurately model complicated scattering geometries. The flip side of this flexibility~--- large space requirements for
             the system of equations. The method also often requires iterative refinement of the grid to achieve good convergence.
 
         \subsubsection{Finite Difference Time Domain}
-                The Finitie Difference Time Domain (FDTD) method is very straightforward technique to solve the propagation of electromagnetic
-            radiation, first developed by Yee\cite{yee1966numerical}. The method approximates both spatial and temporal derivates in the Maxwell's
-            eqations by finite-difference expressions. The standard implementation does this on a staggered Cartesian grid, with the electric field
+                The Finite Difference Time Domain (FDTD) method is very straightforward technique to solve the propagation of electromagnetic
+            radiation, first developed by Yee\cite{yee1966numerical}. The method approximates both spatial and temporal derivatives in the Maxwell's
+            equations by finite-difference expressions. The standard implementation does this on a staggered Cartesian grid, with the electric field
             defined on one sub-grid and the magnetic field defined on the second sub-grid. This results in a system of linear equations, where
-            each time step is used to calculate the electric field on the first sub-grid from the magentic field on the second sub-grid, and then
+            each time step is used to calculate the electric field on the first sub-grid from the magnetic field on the second sub-grid, and then
             the magnetic field at the next time step from the electric field, and so on, until a termination condition is reached.
                 The main advantage of this method is its simplicity~--- no matrix solvers required, possibility for very efficient implementations.
             The disadvantage is that this simplicity makes the method very rigid in terms of time step and spatial step choices for good convergence,
             to mitigate staircase-type errors caused by inefficient mapping of complex scatterer geometry onto a Cartesian grid.
 
         \subsubsection{Finite Integration Technique}
-                The Finite Integration Technique (FIT)\cite{wieland1977discretization}, is idealogically similar to the FDTD method, but works with the
+                The Finite Integration Technique (FIT)\cite{wieland1977discretization}, is ideologically similar to the FDTD method, but works with the
             integral formulation of Maxwell's equations instead of the derivative formulation used by the FDTD. This grants the method more flexibility
-            in grid geometry, allowing for more accurate modelling of complicated scatters. The accuracy of the method, like with FDTD,
+            in grid geometry, allowing for more accurate modeling of complicated scatters. The accuracy of the method, like with FDTD,
             is still highly dependent on the choice of grid size and time step.
                 A detailed derivation for a simplistic case, with a Cartesian grid, can be found in Appendix \ref{ap:FIT}.
 
@@ -140,7 +140,7 @@
             further processing if ordered nanostructures are required.
 
         \subsubsection{Thin-Film Dewetting}
-                Thermal dewetting of thin films can be used to create arrays of nanoparticles, with size and phase controlled by the thickness of the intial
+                Thermal dewetting of thin films can be used to create arrays of nanoparticles, with size and phase controlled by the thickness of the initial
             film and temperature of the process\cite{abbarchi2014wafer}. If fabricated from an unpatterned film, the particles will be unordered~--- producing ordered particles is this
             way requires an additional patterning of the the film, usually by lithographic processes, which increases the complexity of the process and the cost.
 
@@ -149,6 +149,9 @@
             spherical particles deposited either near the irradiated area\cite{kuznetsov2012magnetic} or transferred to another substrate\cite{zywietz2014laser}. Control of the beam sport, fluency and donor material
             structure and be used to control individual particle size and the number of particles fabricated from a single pulse (down to one particle in best-case
             scenario). The ultra-short pulses can also be used to change the phase of already fabricated structures by means of light-induced thermal annealing.
+                The main advantage of femtosecond laser ablation is th ability to gently remove material from the surface~--- allowing for very precise and controllable
+            modification of the surface or precise and controllable formation of nanoparticles. Femtosecond laser ablation is a complicated process that requires
+            complex 3D simulations to accurately predict the outcome of the light-material interaction. A simple qualitative description is provided in Appendix \ref{ap:Ablation}
 
                 The shortcomings of the current methods are that they often require additional annealing to crystallize the fabricated nanoparticles and that
             method presented in \cite{zywietz2014laser} is limited to transferring nanoparticles to transparent substrates.
@@ -158,17 +161,17 @@
             control of both size and positioning of the structures\cite{bakker2015magnetic}. This give great flexibility in terms of fabricating ordered nanostructures, but at the
             cost of extreme complexity and high costs.
 
-    \subsection{Experimental Characteriztion Methods}
+    \subsection{Experimental Characterization Methods}
         \subsubsection{Electron Microscopy}
         \label{sec:ElectronMicroscopy}
                 Electron microscopy is a very high-resolution, down to single nanometer resolutions, method to probe geometrical and
             material parameters of structures. The structure is probed by a focused electron beam, measuring either scattered or transmitted
-            primary electrons, secondary electrons or emitted photons. Because of chrage accumulation caused by the electron beam, samples
+            primary electrons, secondary electrons or emitted photons. Because of charge accumulation caused by the electron beam, samples
             usually need to be conductive to facilitate charge draining, or else the resulting signal will be distorted.
                 The two main methods used are scanning electron microscopy (SEM) and transmission electron microscopy (TEM).
 
             \paragraph{Transmission Electron Microscopy}
-                    In TEM, a colimated high-voltage electron beam, is used to illuminate the specimen. The transmitted beam is then projected,
+                    In TEM, a collimated high-voltage electron beam, is used to illuminate the specimen. The transmitted beam is then projected,
                 with magnification, onto a viewing screen. The transmitted electron beam contains information on the material properties of the
                 sample, based on the interaction of the electrons in the beam with the sample.
 
@@ -181,7 +184,7 @@
             \paragraph{Scanning Electron Microscopy}
                     In SEM, a focused electron beam illuminates a small portion of the sample, and the image of the sample is formed by
                 collecting either back-scattered electrons, secondary electron, Auger electrons or characteristic X-Rays. Depending on what
-                signal is collected, different information about the sample is obtained, e.g. different types of singals originate from
+                signal is collected, different information about the sample is obtained, e.g. different types of signals originate from
                 different interaction volumes, giving differing information of about bulk or surface sample composition.
 
                     Secondary electrons originate from within a few nanometers of the surface, giving good topographical information.
@@ -195,7 +198,7 @@
                 The scattering properties of nanostructures (in the visible spectral range) can be measured by relatively simple optical
             measurements. A very good method for measuring elastic scattering is dark field microscopy, where the only collected signal
             is the light scattered by the structure. Inelastic scattering often means either Fluorescence measurement or Raman scattering.
-            In the first shorter wavelenghth light is absorbed by the sample and then re-emitted as longer wavelength light, usually with
+            In the first shorter wavelength light is absorbed by the sample and then re-emitted as longer wavelength light, usually with
             rather large shifts in wavelength, making measurements relatively easy. Raman scattering, on the other hand, is usually much weaker
             than the excitation signal, and spectrally very close to the excitation signal, making it relatively difficult to single out.
 
@@ -209,24 +212,24 @@
                     This is usually used to measure elastic scattering~--- the collected scattered light is the same wavelength as the excitation.
             \paragraph{Inelastic Scattering~--- Raman Scattering}
                     Fluorescence microscopy and Raman scattering involve measuring scattered light at a wavelength that is different from the
-                wavelength of the excitation. This generally requires filtersing out the excitation wavelengths, and is especially
+                wavelength of the excitation. This generally requires filtering out the excitation wavelengths, and is especially
                 important for Raman measurements, where the wavelength shift between the excitation and scattered is very small.
                 A schematic of such a system can be seen in Figure \ref{fig:expSetup} in the next chapter.
 
         \subsubsection{Scanning Probe Methods}
         \label{sec:SPM}
-                Another class of characterization methods exist that can probe the geometrical and eletromagnetic properties of nanostructures.
+                Another class of characterization methods exist that can probe the geometrical and electromagnetic properties of nanostructures.
             These include techniques like atomic force microscopy (AFM) to probe geometrical properties and near-field scanning
             optical microscopy (NSOM), which can be used to probe electromagnetic field modes close to the structures.
 
     \subsection{Goals}
             The project was devoted to the fabrication as well as the characterization of elastic and inelastic scattering from resonant crystalline
-        silicon nanoaprticles.
+        silicon nanoparticles.
 
             The goals of this project were to:
         \begin{itemize}
-            \item Implement the Discrete Dipole Approximation method to calcualte scattering cross-sections of dielectric particles
-            \item Develop a simple, single-stage femtosecond laser ablation method of frabricating crystallline silicon nanoparticles
+            \item Implement the Discrete Dipole Approximation method to calculate scattering cross-sections of dielectric particles
+            \item Develop a simple, single-stage femtosecond laser ablation method of fabricating crystalline silicon nanoparticles
             \item Carry out optical characterization through single-particle polarization-resolved scattering experiments
             \item Determine the sizes of the particles based on the spectral positions of the Mie-type resonances of the particles
             \item Perform single-particle Raman spectroscopy experiments to prove crystallinity
