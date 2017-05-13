@@ -8,12 +8,12 @@
         There are several reasons for this. First, the material parameters are suitable for visible and infrared nanophotonic devices~---
         Crystalline silicon has a high refractive index, $n \approx 3.5$ at visible and IR wavelengths\cite{li1980refractive}, giving high contrast
         with air, and therefore good field confinement for resonant particles at those wavelengths\cite{mie1908beitrage, dmitriev2016resonant}. Also
-        a very important fact, distinguishing crystalline silicon from amorphous silicon, is the near-zero absorption at visible wavelengths, meaning
+        a very important fact, distinguishing crystalline silicon from amorphous silicon, is the near zero absorption at visible wavelengths, meaning
         that crystalline silicon nanoparticles are nearly lossless at visible and IR wavelengths, making any potential nanophotonic devices very
         efficient and not prone to thermal dissipation~--- something that plagues their plasmonic counterparts.
             Silicon, being the basis of almost all modern electronics, can easily boast a highly developed ecosystem of fabrication and processing
         technologies, making it very easy (if expensive) to fabricate almost any required structure.
-            \hlr{Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotonic devices for medical applications.}
+            Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotonic devices for medical applications.
 
             Another interesting application dimension is related to the existence of and intrinsic Raman response in crystalline silicon. Raman
         scattering of light, and inelastic scattering phenomenon, is an important electromagnetic effect\cite{hayes2012scattering} that has a large number of applications:
@@ -82,7 +82,7 @@
             scattering by each dipole on its one plus the interaction between the dipoles. This makes calculations straightforward
             for scatterers of arbitrary geometries and compositions. Using this assumption, the extinction and absorption cross-section
             are represented by simple sums, iterating over all of the point dipoles, using the polarization of each dipole and the field at
-            the location of the dipole:
+            the location of the dipole\cite{yurkin2007discrete}:
 
             \begin{align}
                 C_{abs} &= 4\pi k \sum_i V_i \Im(\chi_i)|\vec{E}_i|^2 = 4\pi k \sum_i \Im(\vec{P}_i\vec{E}_i^*) \\
@@ -95,7 +95,7 @@
             complicates the computation. A detailed derivation of the basic DDA is provided in Appendix \ref{ap:DDA}.
 
         \subsubsection{Finite Element Method}
-                The Finite Element Method (FIT) is a numerical technique, first introduced in the 1940s\cite{courant1994variational}, to
+                The Finite Element Method (FEM) is a numerical technique, first introduced in the 1940s\cite{courant1994variational}, to
             find approximate solutions to boundary-value problems. The technique has been used in many fields, from mechanical structure
             problems to electromagnetic field propagation.
                 The idea of the method is to replace a continuous domain by a number of sub-domains, in each of which the solution is
@@ -159,12 +159,12 @@
         \subsubsection{Lithographic Methods}
                 Using electron beam lithography and reactive ion etching, one can pattern substrates with high-quality nanocylinders, with near-perfect
             control of both size and positioning of the structures\cite{bakker2015magnetic}. This give great flexibility in terms of fabricating ordered nanostructures, but at the
-            cost of extreme complexity and high costs.
+            cost of extreme process complexity.
 
     \subsection{Experimental Characterization Methods}
         \subsubsection{Electron Microscopy}
         \label{sec:ElectronMicroscopy}
-                Electron microscopy is a very high-resolution, down to single nanometer resolutions, method to probe geometrical and
+                Electron microscopy is a very high-resolution, down to single nanometer resolutions, group of methods to probe geometrical and
             material parameters of structures. The structure is probed by a focused electron beam, measuring either scattered or transmitted
             primary electrons, secondary electrons or emitted photons. Because of charge accumulation caused by the electron beam, samples
             usually need to be conductive to facilitate charge draining, or else the resulting signal will be distorted.
