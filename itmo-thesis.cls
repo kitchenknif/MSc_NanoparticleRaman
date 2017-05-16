@@ -143,8 +143,10 @@
 	\ifthenelse{\equal{#1}{en}}
 	{
 		\presetkeys[#1]{mytitle}{
-			university = {Saint-Petersburg National Research University of Information Technology,\\ Mechanics and Optics},
-			faculty = {Faculty of Laser and Light Engineering},
+			university = {Ministry of Education and Science of the Russian Federation \\
+	                       FEDERAL STATE-FUNDED EDUCATIONAL \\ INSTITUTION OF HIGHER EDUCATION  \\
+                            “SAINT PETERSBURG NATIONAL RESEARCH UNIVERSITY OF INFORMATION TECHNOLOGIES, MECHANICS AND OPTICS”},
+			faculty = {Faculty of Physics and Engineering},
 			city = {Saint-Petersburg},
 			year = {\the\year},
 			type = {diploma}
