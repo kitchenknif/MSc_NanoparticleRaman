@@ -16,6 +16,10 @@
         similar to the the one presented in Ref.~\cite{zywietz2014laser}, but does not require any additional annealing steps to achieve
         nanoparticle crystallinity and is not limited to transparent acceptor substrates.
 
+            The femtosecond laser system used for this project, Femtosecond Oscillator TiF-100F by Avesta Project, is a Ti:Sapphire laser pumped
+        by a Nd:YLF frequency doubled laser, emitting laser pulses at a central wavelength of $800~\si{nm}$, with pulse duration of $100~\si{fs}$,
+        and repetition frequency of $80~\si{MHz}$.
+
         \begin{figure}[h!]
                 \begin{center}
                     \includegraphics[width=0.5\textwidth]{figs/methods/LaserPrinting.eps}
@@ -40,23 +44,24 @@
 
         \subsubsection{Laser Transfer of Crystalline Dielectric Particles}
         \label{met:transfer}
-                Single laser pulses were selected by a Pockels cell-based pulse picker (also Avesta Project),
-            focused by an oil immersion microscope objective (Olympus $100\times$)
-            with a numerical aperture of $\mathit{NA}=1.4$. According to the relation $\emph{d}\approx 1.22\lambda/\mathit{NA}$, the estimated
-            diameter of the beam's focal spot size was $d=0.7~\si{\upmu m}$, which was close to the value measured by a method based on
-            the dependence of the laser-damaged area on incident laser energy ($0.68~\si{\upmu m}$)~~\cite{liu1982simple}.
-            The nanoparticles were fabricated from an $80~\si{nm}$ thick a-Si:H film deposited on a fused silica substrate by
-            plasma enhanced chemical vapor deposition from a SiH$_{3}$ precursor gas.
 
-                The nanoparticles were fabricated by single laser pulses (from a previously undamaged surface of the a-Si:H film) in a
-            forward-transfer geometry, where the receiving substrate is placed under the film with a spacing
-            of $\sim 50~\si{\upmu m}$ (figure~\ref{fig:LaserPrinting}(a)). This geometry has an advantage over the back-transfer geometry
-            used in Ref.~\cite{zywietz2014laser}, because of the possibility of transferring nanoparticles onto a wide variety of substrates,
-            including opaque and structured samples.
+                Laser transfer of the nanoparticles was carried out using single femtosecond laser pulses. The particles were fabricated from
+            a thin, amorphous, a-Si:H film in a forward transfer geometry (the relieving substrate is below the donor substrate and film, with a
+            spacing of around $\sim 50~\si{\upmu m}$~--- see Fig.~\ref{fig:LaserPrinting}(a)). All of the particles were fabricated from
+            previously undamaged areas of the silicon thin film. A forward-transfer geometry has an advantage over the back-transfer geometry
+            that was presented in Ref.~\cite{zywietz2014laser}~--- it does not force the substrate to be transparent, allowing particles to be
+            transferred to a wide variety of substrates, including structured, opaque samples.
 
-                The silicon nanoparticles were printed at laser energies in the range of $0.5-1.2~\si{nJ}$, providing fluencies in
-            the range of $0.12-0.16~\si{J/cm^{2}}$. The fabricated nanoparticles were almost spherical in shape(figure~\ref{fig:Crystallinity}(b))
-            and their diameters lie in the range of $50-200~\si{nm}$, depending on the fluence.
+                The single laser pulses required for the technique were selected from a train of femtosecond laser pulses by a Pockels cell
+            pulse picker from Avesta Project. The pulses were focused by an $100\times$ Olympus oil immersion microscope objective with a
+            numerical aperture of $\mathit{NA}=1.4$. Using the Rayleigh criterion, $\emph{d}\approx 1.22\lambda/\mathit{NA}$ the beam's focal
+            spot size can be estimated to be $d=0.7~\si{\upmu m}$, which is closes to the value estimated by a method using the dependence
+            of the area damaged by the laser on the laser energy ($0.68~\si{\upmu m}$)~~\cite{liu1982simple}.
+
+                The film used for the fabrication process was an $80~\si{nm}$ thick a-Si:H film deposited on afused silica substrate by
+            plasma enhanced chemical vapor deposition (PECVD) from a SiH$_{3}$ precursor gas. Laser energies in the range of $0.5-1.2~\si{nJ}$, were used in the fabrication process, providing fluencies in
+            the range of $0.12-0.16~\si{J/cm^{2}}$. The fabricated nanoparticles were to close being spherical in shape(figure~\ref{fig:Crystallinity}(b))
+            and with diameters in the range of $50-200~\si{nm}$, depending on the fluence.
 
     \clearpage
     \subsection{Optical Measurements}
@@ -107,7 +112,7 @@
 
     \subsection{Analytical Model of Raman Signal Enhancement by Mie resonances of Nanoparticles}
         \label{sec:Theory}
-            This derivation is based on the derivation from Ref.~\citeA{dmitriev2016resonant}.
+            This derivation is taken from the derivation in Ref.~\citeA{dmitriev2016resonant}.
 
             To describe the enhancement of Raman scattering and analyze the role of the electric and magnetic
         Mie resonances of a silicon nanoparticle, the rigorous Green tensor approach was employed. Ideologically,
