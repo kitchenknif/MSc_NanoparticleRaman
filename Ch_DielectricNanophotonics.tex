@@ -6,8 +6,8 @@
     \subsection{Crystalline Silicon as the Material of Choice for Dielectric Nanophotonics}
             Crystalline silicon has been almost ubiquitously chosen as the material of choice for dielectric nanophotonics.
         There are several reasons for this. First, the material parameters are suitable for visible and infrared nanophotonic devices~---
-        Crystalline silicon has a high refractive index, $n \approx 3.5$ at visible and IR wavelengths\cite{li1980refractive}, giving high contrast
-        with air, and therefore good field confinement for resonant particles at those wavelengths\cite{mie1908beitrage, dmitriev2016resonant}. Also
+        Crystalline silicon has a high refractive index, $n \approx 3.5$ at visible and IR wavelengths~\cite{li1980refractive}, giving high contrast
+        with air, and therefore good field confinement for resonant particles at those wavelengths~\cite{mie1908beitrage},~\citeA{dmitriev2016resonant}. Also
         a very important fact, distinguishing crystalline silicon from amorphous silicon, is the near zero absorption at visible wavelengths, meaning
         that crystalline silicon nanoparticles are nearly lossless at visible and IR wavelengths, making any potential nanophotonic devices very
         efficient and not prone to thermal dissipation~--- something that plagues their plasmonic counterparts.
@@ -16,8 +16,8 @@
             Last, but not least, silicon is a bio-compatible material, meaning it is easy to design nanophotonic devices for medical applications.
 
             Another interesting application dimension is related to the existence of and intrinsic Raman response in crystalline silicon. Raman
-        scattering of light, and inelastic scattering phenomenon, is an important electromagnetic effect\cite{hayes2012scattering} that has a large number of applications:
-        sensing\cite{moskovits1985surface}, optical amplification\cite{islam2004wideband}, lasing\cite{pask2003design}.
+        scattering of light, and inelastic scattering phenomenon, is an important electromagnetic effect~\cite{hayes2012scattering} that has a large number of applications:
+        sensing~\cite{moskovits1985surface}, optical amplification~\cite{islam2004wideband}, lasing~\cite{pask2003design}.
         Traditionally, enhancement of Raman scattering for SERS applications has been mostly delegated to metallic nanoparticles, but
         recent studies of high-index subwavelength nanoparticles have paved the way for all-dielectric resonant nanophotonic devices, including
         the possibility of enhancing Raman scattering, including intrinsic Raman from the nanoparticles.
@@ -25,7 +25,7 @@
     \subsection{Analytical Models}
         \subsubsection{Mie-Type Resonances of Dielectric Nanoparticles}
                 An important problem for dielectric nanophotonics is the scattering of electromagnetic radiation by
-            a homogeneous sphere. This problem has an analytical solution, generally called Mie theory\cite{mie1908beitrage}.
+            a homogeneous sphere. This problem has an analytical solution, generally called Mie theory~\cite{mie1908beitrage}.
             The solution of this problem utilizes the symmetry of the problem, and decomposes the scattered radiation into
             vector spherical harmonics. The result is a set of coefficients, $a_i, b_i$ describing the relative contributions
             of $a_i$, electric multipole resonances and $b_i$, magnetic multipole resonances into the final scattered field.
@@ -47,7 +47,7 @@
                 Raman scattering of light from crystalline materials is inelastic scattering resulting from the interaction of optical phonons with
             the incident light. Raman scattering is a versatile method of probing the phonon structure of the materials.
             A simplistic classical model of Raman scattering is sufficient to demonstrate the effect and to properly predict many of the
-            Raman scattering peaks of semiconductors\cite{peter2010fundamentals}. In the model, interaction between light and phonons
+            Raman scattering peaks of semiconductors~\cite{peter2010fundamentals}. In the model, interaction between light and phonons
             is represented as a perturbation of the electric susceptibility $\chi$:
 
             \begin{align}
@@ -82,7 +82,7 @@
             scattering by each dipole on its one plus the interaction between the dipoles. This makes calculations straightforward
             for scatterers of arbitrary geometries and compositions. Using this assumption, the extinction and absorption cross-section
             are represented by simple sums, iterating over all of the point dipoles, using the polarization of each dipole and the field at
-            the location of the dipole\cite{yurkin2007discrete}:
+            the location of the dipole~\cite{yurkin2007discrete}:
 
             \begin{align}
                 C_{abs} &= 4\pi k \sum_i V_i \Im(\chi_i)|\vec{E}_i|^2 = 4\pi k \sum_i \Im(\vec{P}_i\vec{E}_i^*) \\
@@ -95,7 +95,7 @@
             complicates the computation. A detailed derivation of the basic DDA is provided in Appendix \ref{ap:DDA}.
 
         \subsubsection{Finite Element Method}
-                The Finite Element Method (FEM) is a numerical technique, first introduced in the 1940s\cite{courant1994variational}, to
+                The Finite Element Method (FEM) is a numerical technique, first introduced in the 1940s~\cite{courant1994variational}, to
             find approximate solutions to boundary-value problems. The technique has been used in many fields, from mechanical structure
             problems to electromagnetic field propagation.
                 The idea of the method is to replace a continuous domain by a number of sub-domains, in each of which the solution is
@@ -109,7 +109,7 @@
 
         \subsubsection{Finite Difference Time Domain}
                 The Finite Difference Time Domain (FDTD) method is very straightforward technique to solve the propagation of electromagnetic
-            radiation, first developed by Yee\cite{yee1966numerical}. The method approximates both spatial and temporal derivatives in the Maxwell's
+            radiation, first developed by Yee~\cite{yee1966numerical}. The method approximates both spatial and temporal derivatives in the Maxwell's
             equations by finite-difference expressions. The standard implementation does this on a staggered Cartesian grid, with the electric field
             defined on one sub-grid and the magnetic field defined on the second sub-grid. This results in a system of linear equations, where
             each time step is used to calculate the electric field on the first sub-grid from the magnetic field on the second sub-grid, and then
@@ -119,7 +119,7 @@
             to mitigate staircase-type errors caused by inefficient mapping of complex scatterer geometry onto a Cartesian grid.
 
         \subsubsection{Finite Integration Technique}
-                The Finite Integration Technique (FIT)\cite{wieland1977discretization}, is ideologically similar to the FDTD method, but works with the
+                The Finite Integration Technique (FIT)~\cite{wieland1977discretization}, is ideologically similar to the FDTD method, but works with the
             integral formulation of Maxwell's equations instead of the derivative formulation used by the FDTD. This grants the method more flexibility
             in grid geometry, allowing for more accurate modeling of complicated scatters. The accuracy of the method, like with FDTD,
             is still highly dependent on the choice of grid size and time step.
@@ -129,24 +129,24 @@
             There are several techniques to fabricate dielectric nanoparticles. They can be ordered in terms of level of control over the size
         of the particles and the options of building patterned nanostructures for the nanoparticles. Complexity and cost of the processes generally
         correlate with the level of control provided by the different techniques.
-            The main techniques can be grouped into: chemical synthesis\cite{shi2012new}, thin-film dewetting\cite{abbarchi2014wafer},
-        laser ablation-based\cite{zywietz2014laser} and lithographic methods.
+            The main techniques can be grouped into: chemical synthesis~\cite{shi2012new}, thin-film dewetting~\cite{abbarchi2014wafer},
+        laser ablation-based~\cite{zywietz2014laser} and lithographic methods.
 
         \subsubsection{Chemical Synthesis}
                 Chemical vapor deposition of silicon from disilane gas has been used to fabricate silicon nanoparticles, ($Si_2H_6 \rightarrow 2Si + 3H_2$ at
-            high temperatures) achieving polycrystalline spherical particles\cite{shi2012new}. Monodisperse colloidal particles have been fabricated from trisilane ($Si_3H_8$)
-            at high temperature in n-Hexane\cite{shi2013monodisperse}. Sizes of the particles were controlled by changing the concentration of the trisilane and the temperature of the
+            high temperatures) achieving polycrystalline spherical particles~\cite{shi2012new}. Monodisperse colloidal particles have been fabricated from trisilane ($Si_3H_8$)
+            at high temperature in n-Hexane~\cite{shi2013monodisperse}. Sizes of the particles were controlled by changing the concentration of the trisilane and the temperature of the
             reaction. The main disadvantages of these types of methods are the porosity and high hydrogen concentration of the particles and necessity of
             further processing if ordered nanostructures are required.
 
         \subsubsection{Thin-Film Dewetting}
                 Thermal dewetting of thin films can be used to create arrays of nanoparticles, with size and phase controlled by the thickness of the initial
-            film and temperature of the process\cite{abbarchi2014wafer}. If fabricated from an unpatterned film, the particles will be unordered~--- producing ordered particles is this
+            film and temperature of the process~\cite{abbarchi2014wafer}. If fabricated from an unpatterned film, the particles will be unordered~--- producing ordered particles is this
             way requires an additional patterning of the the film, usually by lithographic processes, which increases the complexity of the process and the cost.
 
         \subsubsection{Laser Ablation-Based Methods}
                 Laser ablation by focused ultra-short pulses can also be used to fabricated nanoparticles by heating up the irradiated area to eject material into
-            spherical particles deposited either near the irradiated area\cite{kuznetsov2012magnetic} or transferred to another substrate\cite{zywietz2014laser}. Control of the beam sport, fluency and donor material
+            spherical particles deposited either near the irradiated area~\cite{kuznetsov2012magnetic} or transferred to another substrate~\cite{zywietz2014laser}. Control of the beam sport, fluency and donor material
             structure and be used to control individual particle size and the number of particles fabricated from a single pulse (down to one particle in best-case
             scenario). The ultra-short pulses can also be used to change the phase of already fabricated structures by means of light-induced thermal annealing.
                 The main advantage of femtosecond laser ablation is th ability to gently remove material from the surface~--- allowing for very precise and controllable
@@ -154,11 +154,11 @@
             complex 3D simulations to accurately predict the outcome of the light-material interaction. A simple qualitative description is provided in Appendix \ref{ap:Ablation}
 
                 The shortcomings of the current methods are that they often require additional annealing to crystallize the fabricated nanoparticles and that
-            method presented in \cite{zywietz2014laser} is limited to transferring nanoparticles to transparent substrates.
+            method presented in Ref.~\cite{zywietz2014laser} is limited to transferring nanoparticles to transparent substrates.
 
         \subsubsection{Lithographic Methods}
                 Using electron beam lithography and reactive ion etching, one can pattern substrates with high-quality nanocylinders, with near-perfect
-            control of both size and positioning of the structures\cite{bakker2015magnetic}. This give great flexibility in terms of fabricating ordered nanostructures, but at the
+            control of both size and positioning of the structures~\cite{bakker2015magnetic}. This give great flexibility in terms of fabricating ordered nanostructures, but at the
             cost of extreme process complexity.
 
     \subsection{Experimental Characterization Methods}
@@ -198,6 +198,8 @@
                 The scattering properties of nanostructures (in the visible spectral range) can be measured by relatively simple optical
             measurements. A very good method for measuring elastic scattering is dark field microscopy, where the only collected signal
             is the light scattered by the structure. Inelastic scattering often means either Fluorescence measurement or Raman scattering.
+            More involved effects, for example, second and third harmonic generation, can also be put in the same inelastic scattering category,
+            but are outside the scope of this thesis.
             In the first shorter wavelength light is absorbed by the sample and then re-emitted as longer wavelength light, usually with
             rather large shifts in wavelength, making measurements relatively easy. Raman scattering, on the other hand, is usually much weaker
             than the excitation signal, and spectrally very close to the excitation signal, making it relatively difficult to single out.

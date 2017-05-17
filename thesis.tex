@@ -13,6 +13,7 @@
 \usepackage{tikz}
 \usepackage{tikzscale}
 \usepackage{subcaption}
+\usepackage[resetlabels,labeled]{multibib}
 
 \newcommand{\hlb}[1]{
             {\color{blue} #1}}
@@ -21,8 +22,9 @@
 \newcommand{\hlg}[1]{
             {\color{olive} #1}}
 
-
 \setmainlanguage{english}
+\newcites{A}{Author's Publications}
+
 \begin{document}
 
 % \filltitle{ru}{
@@ -67,22 +69,18 @@
 \input{Ch_Experiment}
 \input{Ch_Results}
 \input{Ch_Acknowledge}
+
+\newpage
+\bibliographystyleA{ugost2008l}
+\bibliographyA{Refs_DmitrievMS}
+
 \appendix
 \input{Ch_Appendix}
 
 \newpage
-%\nocite{*}
-%\setlength{\parskip}{-3pt}
-%\renewcommand\bibsection{\nsection{Литература}}
-%\let\oldbibliography\thebibliography
-%\renewcommand{\thebibliography}[1]{%
-%  \oldbibliography{#1}
-%  \setlength{\itemsep}{6pt}
-%}
-%\def\BibPrefix{}
-
-
-%\bibliographystyle{disser_m}
 \bibliographystyle{ugost2008l}
-\input{biblink}
+\bibliography{Refs_DmitrievMS}
+
+
+
 \end{document}
