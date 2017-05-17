@@ -161,8 +161,6 @@
 
     \subsection{Raman Scattering Enhancement from Single Nanoparticles}
         \label{sec:RamanExp}
-        Theoretically predicted enhancement of Raman scattering at different Mie-resonances (see Sec.~\ref{sec:Theory}) was directly compared with to
-        experiments with individual crystalline silicon (c-Si) nanoparticles on a fused silica substrate.
 
         \begin{figure}[!ht]
             \begin{center}
@@ -176,29 +174,21 @@
             \label{fig:EnhancementExp}
         \end{figure}
 
-        The measured Raman scattering signal from individual nanoparticles exhibits extremely strong dependence on their size
-        and color in the dark-field images (Fig.~\ref{fig:EnhancementExp}b). Such a dependence for the excitation light at the wavelength
-        $\lambda$=633~nm shows a maximum of Raman scattering for nanoparticles with $D\approx 155$~nm, supporting MD resonance
-        at this wavelength. The maximum value of the enhancement factor (EF) for nanoparticles with MD in comparison with
-        nanoparticles with diameters $D\approx125$~nm and $D\approx175$~nm is about $EF\approx$140. The calculation of EF
-        from experimental data is based on the formula: EF~=~(I/I$_{\rm norm}$)$\times$(V/V$_{\rm norm}$), where I is Raman
+
+            Theoretically predicted Raman scattering enhancement on different Mie-type resonances, see Sec.~\ref{sec:Theory} was demonstrated
+        experimentally be measuring Raman scattering from single crystalline nanoparticles, fabricated using the laser transfer process described
+        in Sec.~\ref{met:transfer}. During the Raman measurements it was noted that different nanoparticles exhibit different intensities of
+        Raman scattering, and that that intensity of the scattering has a non-trivial dependence on particle size, see Fig.~\ref{fig:EnhancementExp}b.
+        For the excitation wavelength of $\lambda$=633~nm, the maximum Raman intensity corresponds to particles with a diameter $D\approx 155$~nm,
+        which corresponds to a magnetic dipole (MD) resonance at the excitation wavelength. To be able to compare different Raman measurements among
+        themselves they needed to be normalized, because Raman scattering is dependent on the volume of the excited Raman-active medium. To calculate
+        enhancement factors, a baseline intensity also needed to be chosen. A non-resonant particle, e.g. with diameter $D\approx$135~nm, demonstrating
+        the smallest measured Raman signal,
+        was chosen as the baseline intensity, relative to which the enhancement factor was calculated. The enhancement factor, EF, was
+        calculated according to the formula EF~=~(I/I$_{\rm norm}$)$\times$(V/V$_{\rm norm}$), where I is Raman
         scattering signal from a studied nanoparticle with known diameter and volume V, I$_{\rm norm}$ is Raman signal from
-        a nanoparticle of known volume V$_{\rm norm}$ with the smallest observed signal. To make such a normalization, the
-        nanoparticle with $D\approx$135~nm was chosen.
-        In order to distinguish contributions from each type of Mie resonances, the generalized EF dependence of Raman
-        scattering should be represented in terms of the dimensionless nanoparticle diameter $D/\lambda_{\rm Si}$,
-        taking into account different refractive indices at different wavelengths (Fig.~\ref{fig:EnhancementExpTheory}). Such a dependence
-        exhibits a pronounced maximum with a peak $EF\approx$140 at D/$\lambda_{\rm Si}$ $\approx$ 1, i.e. near the
-        magnetic dipole resonance. This value is 5-7 times larger than EF for the electric dipole. Insets in Fig.~\ref{fig:EnhancementExp}a
-        provide an illustrative interpretation of this enhancement. At the MD resonance, a larger fraction of electromagnetic
-        energy is stored inside the nanoparticle, thus increasing total Raman polarization and emission.
-        Corresponding theoretical calculations for perfect spherical c-Si nanoparticles predict even larger difference between
-        MD and ED ($\sim$ 10), which is not perfectly matched with the observed results owing to the existence of nanoscale
-        deviations and a thin natural oxide layer~\cite{fu2012directional, zywietz2015electromagnetic}. Nevertheless, the
-        Raman signal enhancement in the vicinity of MD is in excellent agreement with the analytical model from Sec. \ref{sec:Theory}.
-        The data shown in Fig.~\ref{fig:EnhancementExpTheory} is limited to nanoparticle diameters $D/\lambda_{\rm Si}<1.3$ as the fabrication method
-        does not allow to make larger particles without pronounced ellipticity. At the same time, even small deviation from the spherical shape leads to
-        suppression of the MQ resonance~\cite{fu2012directional}, limiting experimental demonstrations of the enhancement to MD and ED resonances.
+        a nanoparticle of known volume V$_{\rm norm}$ chosen as the baseline, in this case, a nanoparticle with the smallest Raman signal.
+        The maximum value of the enhancement factor (EF) for nanoparticles with a MD resonance at 633nm was calculated to be $EF\approx$140.
 
         \begin{figure}[!hb]
             \begin{center}
@@ -210,3 +200,19 @@
             (red dashed curve).}
             \label{fig:EnhancementExpTheory}
         \end{figure}
+
+            In order to compare the experimental enhancement factors to the predicted contributions from different resonances, the
+        enhancement factor of Raman scattering needed to be plotted relative to the dimensionless particle size $D/\lambda_{\rm Si}$,
+        taking into account the dispersion of the refractive index of silicon. The result of this is show on Fig.~\ref{fig:EnhancementExpTheory}.
+        The resulting dependence has a pronounced peak at D/$\lambda_{\rm Si}$ $\approx$ 1, with $EF\approx$140 i.e. near the
+        magnetic dipole resonance, which agrees with the theoretical prediction from Sec. \ref{sec:Theory}. This maximum EF is about 5-7 times larger than the EF for the
+        electric dipole. Insets in Fig.~\ref{fig:EnhancementExp}a, showing the confinement of the electric field at the ED and MD resonances
+        provide an illustrative interpretation of this enhancement. The MD resonance confines a larger fraction of the electric field inside the
+        nanoparticle than the ED resonance, therefore producing more efficient excitation of the Raman active medium and thus increasing total
+        Raman polarization and emission. The theoretical predictions, for perfect spherical nanoparticles, have an even larger difference in EF
+        between ED and MD resonances ($\sim$ 10), which is not achieved in experiment because of nanoscale imperfections in the nanoparticles
+        and the existence of a thin native oxide layer~\cite{fu2012directional, zywietz2015electromagnetic}.
+        The results shown in Fig.~\ref{fig:EnhancementExpTheory} are limited to nanoparticle diameters $D/\lambda_{\rm Si}<1.3$
+        because the fabrication method is limited in the maximum size of produced nanoparticles without significant deviations from a spherical shape.
+        Even a small deviation from the spherical leads to suppression of the MQ resonance~\cite{fu2012directional}, which makes large but aspherical
+        particles applicable to only study enhancement on ED and MD resonances.
