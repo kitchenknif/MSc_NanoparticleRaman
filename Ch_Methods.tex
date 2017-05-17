@@ -56,7 +56,7 @@
             pulse picker from Avesta Project. The pulses were focused by an $100\times$ Olympus oil immersion microscope objective with a
             numerical aperture of $\mathit{NA}=1.4$. Using the Rayleigh criterion, $\emph{d}\approx 1.22\lambda/\mathit{NA}$ the beam's focal
             spot size can be estimated to be $d=0.7~\si{\upmu m}$, which is closes to the value estimated by a method using the dependence
-            of the area damaged by the laser on the laser energy ($0.68~\si{\upmu m}$)~~\cite{liu1982simple}.
+            of the area damaged by the laser on the laser energy ($0.68~\si{\upmu m}$)~\cite{liu1982simple}.
 
                 The film used for the fabrication process was an $80~\si{nm}$ thick a-Si:H film deposited on afused silica substrate by
             plasma enhanced chemical vapor deposition (PECVD) from a SiH$_{3}$ precursor gas. Laser energies in the range of $0.5-1.2~\si{nJ}$, were used in the fabrication process, providing fluencies in
@@ -114,14 +114,14 @@
         \label{sec:Theory}
             This derivation is taken from the derivation in Ref.~\citeA{dmitriev2016resonant}.
 
-            To describe the enhancement of Raman scattering and analyze the role of the electric and magnetic
-        Mie resonances of a silicon nanoparticle, the rigorous Green tensor approach was employed. Ideologically,
-        the theoretical approach is based on earlier related studies~~\cite{canccado2014theory, murphy1983enhanced}.
+             The rigorous Green tensor approach was used to describe the role of the electric and magnetic Mie resonances
+        in the enhancement of Raman scattering of a silicon nanoparticle. The theoretical approach is based on earlier related
+        studies~\cite{canccado2014theory, murphy1983enhanced}.
 
-        In this framework, first, the spatial field distribution $\mathbf{E}_{exc}(\mathbf{r})$
-        inside the nanoparticle at the excitation frequency created by an external source was determined. Assuming that a
-        spherical nanoparticle in free space is illuminated by a plane wave, the normalized
-        electric field inside the nanoparticle can be represented as a series of vector spherical harmonics~~\cite{bohren1983absorption}:
+        The first was was to determine the spatial distribution of the electric field $\mathbf{E}_{exc}(\mathbf{r})$ at the excitation frequency
+        inside the nanoparticle from an external source. Assuming a spherical particle, in free space, with illumination by a plane wave,
+        the normalized electric field inside the nanoparticle can be decomposed into a series of vector spherical harmonics~\cite{bohren1983absorption}:
+
         %
         \begin{align}
             \mathbf{E}_{exc}(\mathbf{r})=\sum\nolimits_{n=1}^\infty E_n \left(c_n\mathbf{M}_{o1n}^{(1)}(\mathbf{r}) -
@@ -129,22 +129,26 @@
             \label{eq1}
         \end{align}
         %
-        where $c_n$ and $d_n$ are the Mie coefficients, ${{\mathbf{M}}_{o1n}^{(1)}}$ and ${{\mathbf{N}}_{e1n}^{(1)}}$ are
-        the orthogonal vectorial spherical harmonics, and ${E_n} = {i^n}(2n + 1)/[n(n + 1)]$. The excitation field distribution
-        at each point inside the medium defines the Raman polarization oscillating at the Stokes frequency $\omega_S$ according to
+        where $c_n$ and $d_n$ are Mie coefficients, ${{\mathbf{M}}_{o1n}^{(1)}}$ and ${{\mathbf{N}}_{e1n}^{(1)}}$~---
+        orthogonal vectorial spherical harmonics, and ${E_n} = {i^n}(2n + 1)/[n(n + 1)]$. The distribution of the excitation electric field
+        at each point inside the nanoparticles defines the Raman polarization oscillating the Stokes-shifted frequency $\omega_S$:
         %
         \begin{align}
             {{\bf{P}}_s}\left( {\bf{r}} \right) = {\chi _s}\hat \alpha_j \left( {\bf{r}} \right){{\bf{E}}_{exc}}\left( {\bf{r}} \right),
             \label{eq2}
         \end{align}
         %
-        where $\chi_s$ is the scalar Raman susceptibility, and $\hat \alpha_j$ is the Raman polarizability tensor representing
-        the threefold degenerate transverse optical (TO) phonon mode excitation~~\cite{ralston1970spontaneous, peter2010fundamentals}.
-        Induced Raman polarization, in turn, produces an electromagnetic field at the observation point
-        $\mathbf{r}_0$ given by $\mathbf{E}_s(\mathbf{r}_0) = (\omega_s^2/c^2)\int\limits_V {{{\hat G}_s}\left( {{{\mathbf{r}}_0},{\mathbf{r}}} \right){{\mathbf{P}}_s}\left( {\mathbf{r}} \right){d^3}{\mathbf{r}}}$,
-        where  ${\hat G_s}\left( {{{\mathbf{r}}_0},{\mathbf{r}}} \right)$ is the Green tensor at the Stokes frequency accounting
-        for the Si nanoparticle and integration is carried out over the nanoparticle volume $V$. Finally, the collected signal at
-        the point $\mathbf{r}_0$ is presented in the form:
+        where $\chi_s$ is the scalar Raman susceptibility, $\hat \alpha_j$ is the Raman polarizability tensor representing
+        the threefold degenerate transverse optical (TO) phonon mode excitation~\cite{ralston1970spontaneous, peter2010fundamentals}.
+
+        The induced Raman polarization, then produces an electromagnetic field at an observation point
+        $\mathbf{r}_0$:
+        \begin{align}
+            \mathbf{E}_s(\mathbf{r}_0) = (\omega_s^2/c^2)\int\limits_V {{{\hat G}_s}\left( {{{\mathbf{r}}_0},{\mathbf{r}}} \right){{\mathbf{P}}_s}\left( {\mathbf{r}} \right){d^3}{\mathbf{r}}}
+        \end{align}
+        where ${\hat G_s}\left( {{{\mathbf{r}}_0},{\mathbf{r}}} \right)$ is the Green tensor at the Stokes-shifted frequency, accounting
+        for the Si nanoparticle. The integration is carried out over $V$, the volume of the nanoparticle. Then, the resulting signal at
+        $\mathbf{r}_0$ can be written as:
         %
         \begin{align} %Final collected signal
             S\left( {{{\mathbf{r}}_0}} \right)
@@ -154,14 +158,18 @@
             \label{eq4}
         \end{align}
         %
-        where summation is performed over the three degenerate TO phonon modes. Since the Raman scattering is a spontaneous process
-        (until we enter the stimulated Raman scattering regime), the  induced polarization $\mathbf{P}_s$ is not coherent across
-        the whole particle. Therefore, in Eq.~(\ref{eq4}), the averaging is carried out over all possible realizations of the Raman
-        polarization $\mathbf{P}_s$. Taking into account that the correlation length of the Raman scattering in silicon $L_c$ is of
-        the order of tens nanometer and much less than the nanoparticle diameter, the correlation of the Raman
-        polarizability tensors can be approximated by the Dirac delta function
-        $\left\langle {\hat \alpha_j \left( {{{\mathbf{r}}_1}} \right) \otimes \hat \alpha_j \left( {{{\mathbf{r}}_2}} \right)} \right\rangle \sim \delta \left({{\mathbf{r}_1} - {\mathbf{r}_2}} \right)$.
-        Under this assumption, Eq.~(\ref{eq4}) reduces to
+        the summation is performed over the three degenerate TO phonon modes of silicon. Raman scattering is a spontaneous process
+        (unless we are in the stimulated Raman scattering regime), meaning that the induced polarization $\mathbf{P}_s$ is not coherent across
+        the particle. To account for that, the averaging in Eq.~(\ref{eq4}) is carried out over all possible orientations of Raman
+        polarization $\mathbf{P}_s$. Because the correlation length of Raman scattering in silicon, $L_c$, is much less than the nanoparticle diameter
+        (for particles resonant in the visible and near-infrared spectral ranges), being on the order of tens of nanometers, the is is possible to
+        approximate the correlation of the Raman by the Dirac delta function:
+
+        \begin{align}
+            \left\langle {\hat \alpha_j \left( {{{\mathbf{r}}_1}} \right) \otimes \hat \alpha_j \left( {{{\mathbf{r}}_2}} \right)} \right\rangle \sim \delta \left({{\mathbf{r}_1} - {\mathbf{r}_2}} \right)
+        \end{align}
+
+        This reduces Eq.~(\ref{eq4}) to
         %
         \begin{align}
             S\left( {{{\bf{r}}_0}} \right) = \frac{{\omega _s^4}}{{{c^4}}}\sum\limits_j {\int\limits_V {{d^3}{\bf{r}}{{\left| {{{\hat G}_s}\left(
@@ -178,16 +186,18 @@
             \label{fig:TheoryEnhancement}
         \end{figure}
 
-            Expression~(\ref{eq5}) can be simplified with the use of the single-mode approximation. The
-        electromagnetic response of an optically small Si nanoparticle at the excitation wavelength is dominated by a single
-        magnetic or electric multipole resonance depending on the particle radius~~\cite{evlyukhin2010optical}. Therefore,
-        only one resonant term in Eq.~(\ref{eq1}) is required and the electric field inside the nanoparticle can be represented as ${
-        {\mathbf{{E}}}_{exc}} \approx {E_n}{c_n}{\mathbf{M}}_{o1n}^{(1)}$, for the $n-$th magnetic resonance, and
-        ${{\mathbf{{E}}}_{exc}}\approx -i{E_n}{d_n}{\mathbf{N}}_{e1n}^{(1)}$, for the $n-$th electric resonance.
-        Furthermore, since the Raman shift in silicon is small compared to the linewidth $\gamma$ of
-        Mie resonance at $\omega_0$, the main contribution to the Green tensor is provided by the same eigenmode of
-        the system. Therefore, expanding the Green tensor in the series of eigenmodes~~\cite{ishimaru1991electromagnetic} and keeping only
-        the resonant term:
+            Eq.~\ref{eq5} can be simplified by the single-mode approximation, which is applicable in this case, because the electromagnetic
+        response of an optically small particle is always dominated by a single multipole resonance~\cite{evlyukhin2010optical}. Because
+        of this, only one term from Eq.~\ref{eq1} is required to describe the electric field inside the nanoparticle:
+        \begin{align}
+            {{\mathbf{{E}}}_{exc}} \approx {E_n}{c_n}{\mathbf{M}}_{o1n}^{(1)} \\
+            {{\mathbf{{E}}}_{exc}}\approx -i{E_n}{d_n}{\mathbf{N}}_{e1n}^{(1)}
+        \end{align}
+        For the $n-$th magnetic or $n-$th electric resonance.
+
+        Because the Raman shift in silicon, compared to the linewidth $\gamma$ of Mie resonances at $\omega_0$, is small, the main contribution
+        to the Green tensor is also provided by the same Mie resonance of the particle. Expanding the Green tensor in a series of
+        eigenmodes~\cite{ishimaru1991electromagnetic} and discarding all therms except the resonant one:
         %
         \begin{align}
             {\hat G_s}\left( {{{\bf{r}}_0},{\bf{r}}} \right) \approx \frac{{{c^2}}}{{{N^2}}}\frac{{{\bf{u}}\left( {{{\bf{r}}_0}} \right) \otimes
@@ -195,10 +205,10 @@
             \label{eq8}
         \end{align}
         %
-        where ${{\mathbf{u}}\left( {{\mathbf r}} \right)}$ is the spatial field distribution of the eigenmode, and
+        where ${{\mathbf{u}}\left( {{\mathbf r}} \right)}$ is the spatial distribution of the field of the eigenmode,
         ${N^2} = {\int {{\mathop{\rm Re}\nolimits} \varepsilon \left( {\bf{r}} \right)\left| {{\bf{u}}\left( {\bf{r}} \right)} \right|} ^2}{d^3}{\bf{r}}$
-        is the normalization constant. Finally, integrating the expression (5) over the whole volume $V$ of the nanoparticle,
-        the following simple expression, describing the Raman signal enhanced by a single Mie resonance, can be written:
+        is a normalization constant. After integrating Eq.~\ref{eq8} over the volume $V$ of the nanoparticle,
+        an expression for Raman signal enhanced by a single Mie resonance, can be written:
         %
         \begin{align}
             S\left( {{{\mathbf{r}}_0}} \right) \approx V{\left( {\frac{{{\omega _s}}}{c}} \right)^4}{\left| {\frac{{{\chi_s s_n}}}{{{{\left( {{\omega
@@ -206,25 +216,23 @@
             \label{eq9}
         \end{align}
         %
-        where $s_n$ stands for the Mie coefficient, either $c_n$ or $d_n$ of the corresponding mode. The above expression clearly
-        shows that the total enhancement of Raman scattering depends on two factors: the enhancement of the excitation field
-        inside the medium, and the Purcell enhancement of the Raman dipoles radiation~~\cite{checoury2010deterministic}.
+        where $s_n$ stands for the Mie coefficient~--- either $c_n$ or $d_n$, electric or magnetic, of the mode. The equation
+        shows that enhancement of Raman scattering depends on two main factors: enhancement of the excitation field
+        inside the medium, and the Purcell enhancement of the Raman dipole radiation~\cite{checoury2010deterministic}.
+        %
+        Two main parameters in Eq.~(\ref{eq9}) are resonance frequency $\omega_0$ and linewidth $\gamma$. The first can be
+        easily estimated numerically, and the second can be estimated by an analytical expression from Ref.~\cite{lai1991effect}.
+        Using these values, The spectrum of Raman enhancement by different resonances of a spherical silicon nanoparticle can be plotted.
+        Assuming a constant excitation wavelength of 633~nm (used in the Raman scattering experiments in this thesis), which corresponds to
+        to a wavelength of $\lambda_{\rm Si}=163$~nm inside the nanoparticle, the spectrum, normalized to particle volume $V=4\pi R^3/3$, is
+        plotted in Fig.~\ref{fig:TheoryEnhancement} as a  function of dimensionless nanoparticle diameter $D/\lambda_{\rm Si}$. The spectrum
+        shows the contributions of the magnetic dipole (MD), electric dipole (ED), magnetic quadrupole (MQ) and electric quadrupole (EQ) resonances.
 
-        The two key parameters entering Eq.~(\ref{eq9}) are the resonance frequency $\omega_0$ and the resonance linewidth $\gamma$.
-        The resonance frequency can be easily estimated numerically, while for the estimation of the resonance linewidth one can
-        employ analytical expressions from Ref.~\cite{lai1991effect}. Substituting these values into Eq.~(\ref{eq9}), one can obtain the desired
-        spectrum of Raman scattering enhanced by the resonances of a silicon sphere. This spectrum (normalized by the particle
-        volume $V=4\pi R^3/3$) is plotted in Fig.~\ref{fig:TheoryEnhancement} as a  function of dimensionless nanoparticle diameter $D/\lambda_{\rm Si}$
-        with $\lambda_{\rm Si}=163$~nm being the wavelength of the excitation signal inside the silicon for the magnetic dipole (MD), electric dipole (ED),
-        magnetic quadrupole (MQ) and electric quadrupole (EQ) resonances assuming a constant excitation wavelength of 633~nm,
-        used below in experiments.
-
-        The derived single-mode expression (\ref{eq9}) makes it possible to clearly separate contributions of each Mie resonance of the
-        nanoparticle into the total Raman scattering enhancement. As follows from Fig.~(\ref{fig:TheoryEnhancement}), the strongest enhancement
-        is associated with the MQ resonance due to its high $Q-$factor. Notably, the predicted Raman scattering enhancement
-        at the MD resonance, which occurs for the smallest particles, is more than an order of magnitude larger than that for
-        the ED resonance.
-
+        Eq.~\ref{eq9}, being a single-mode expression, can be used to easily decompose the total Raman scattering enhancement into the constituent
+        Mie resonance components. Fig.~\ref{fig:TheoryEnhancement} clearly shows, that the strongest enhancement is caused by the magnetic quadrupole
+        resonance (MQ), owing to its high $Q-factor$. Another interesting fact is that the strongest Raman enhancement is caused by magnetic resonances,
+        with both magnetic quadrupole (MQ) and dipole (MD) resonances out-performing their electric counterparts, EQ and ED, with MD being more than an
+        order stronger than ED.
 
     \subsubsection{Numerical Methods}
     \label{sec:Numeric}
@@ -247,7 +255,7 @@
             but the complexity of the calculation and difficulty of accurately modeling particles led to the DDA being abandoned in favor of plain
             Mie theory, which provided more than enough accuracy for the purposes of the project.
 
-            \begin{figure}[h!]
+            \begin{figure}[!ht]
                 \centering
                 \begin{subfigure}[b]{0.3\textwidth}
                     \includegraphics[width=\textwidth]{figs/methods/DDA/n_33.pdf}
@@ -265,7 +273,6 @@
                 \label{fig:DDA_Dipole}
             \end{figure}
 
-        \clearpage
         \subsubsection{Finite Integration Technique}
         \label{subsec:FIT}
 
@@ -274,7 +281,7 @@
             The model was a slightly oblate spheroid, corresponding to the experimentally determined geometric parameters of the
             nanoparticles.
 
-            \begin{figure}[!ht]
+            \begin{figure}[!hb]
                 \centering
                 \includegraphics[width=0.7\textwidth]{figs/methods/FIT/CST.eps}
                 \caption{Field distribution inside 180nm spheroid nanoparticle with 1.12 oblateness parameter at electric and magnetic dipole resonances,
