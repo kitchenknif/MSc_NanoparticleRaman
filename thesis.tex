@@ -13,36 +13,14 @@
 \usepackage{tikz}
 \usepackage{tikzscale}
 \usepackage{subcaption}
-\usepackage[resetlabels,labeled]{multibib}
+\usepackage[resetlabels]{multibib}
 
-\newcommand{\hlb}[1]{
-            {\color{blue} #1}}
-\newcommand{\hlr}[1]{
-            {\color{red} #1}}
-\newcommand{\hlg}[1]{
-            {\color{olive} #1}}
+
 
 \setmainlanguage{english}
-\newcites{A}{Author's Publications}
+\newcites{A}{Approbation of Work}
 
 \begin{document}
-
-% \filltitle{ru}{
-%     chair              = {Кафедра нанофотоники и метаматериалов},
-%     title              = {Резонансные оптические свойства диэлектрических наночастиц, полученных методом фемтосекундной лазерной абляции},
-%     type               = {master},
-%     position           = {студента},
-%     group              = {V4240},
-%     coursenum          = {12.04.03},
-%     course             = {Нанофотоника и Метаматериалы},
-%     author             = {Дмитриев Павел Алексеевич},
-%     supervisorPosition = {к.\,ф.-м.\,н.},
-%     supervisor         = {Самусев А.\,К.},
-%     reviewerPosition   = {},
-%     reviewer           = {},
-%     chairHeadPosition  = {д.\,ф.-м.\,н.},
-%     chairHead          = {Белов П.\,А.},
-% }
 
 \filltitle{en}{
     chair              = {Department of Nanophotonics and Metamaterials},
@@ -53,34 +31,47 @@
     coursenum          = {12.04.03},
     course             = {Photonics and Optoinformatics},
     author             = {Pavel Alekseevich Dmitriev},
-    supervisorPosition = {Dr. },
-    supervisor         = {A.\, K. Samusev},
-    reviewerPosition   = {Dr.},
-    reviewer           = {A. Kuznetsov},
+    supervisorPosition = {Dr.},
+    supervisor         = {A.\,K. Samusev},
+    reviewerPosition   = {},
+    reviewer           = {},
     chairHeadPosition  = {D. Sc.},
     chairHead          = {P.\,A. Belov},
 }
 \maketitle
+\setcounter{page}{6}
 \tableofcontents
+
+
+\setlength{\parindent}{17.5pt}. %абзацный отступ 1.25 * 14pt
 
 \input{Ch_Intro}
 \input{Ch_DielectricNanophotonics}
 \input{Ch_Methods}
 \input{Ch_Experiment}
 \input{Ch_Results}
-\input{Ch_Acknowledge}
 
 \newpage
+\nociteA{dmitriev2016laser,dmitriev2016resonant,dmitriev2016direct,dmitriev2016femtosecond,dmitriev2016single}
 \bibliographystyleA{ugost2008l}
+
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}   % Заменяем библиографию с квадратных скобок на точку
+\makeatother
+
 \bibliographyA{Refs_DmitrievMS}
 
-\appendix
-\input{Ch_Appendix}
+\section*{Appendices}
+
+\begin{subappendices}
+    \renewcommand{\thesubsection}{\Alph{subsection}}
+    \renewcommand{\thesubsubsection}{\Alph{subsection}.\arabic{subsubsection}}
+    \input{Ch_Appendix}
+\end{subappendices}
 
 \newpage
 \bibliographystyle{ugost2008l}
+
 \bibliography{Refs_DmitrievMS}
-
-
 
 \end{document}

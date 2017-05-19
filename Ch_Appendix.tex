@@ -1,6 +1,6 @@
 % !TeX spellcheck = english
 % !TEX root = thesis.tex
-\section{Mie Scattering of Light}
+\subsection{Mie Scattering of Light}
 \label{ap:Mie}
     An important problem for dielectric nanophotonics is the scattering of electromagnetic radiation by
     a homogeneous sphere. This problem has an analytical solution, generally called Mie theory~\cite{mie1908beitrage}. The following
@@ -11,7 +11,7 @@
         \vec{E}_{inc} = E_0 e^{i\beta_0z}\hat{x}
     \end{align}
 
-    \subsection{Maxwell's Equations}
+    \subsubsection{Maxwell's Equations}
         Starting with
         \begin{align}
             \nabla \times \vec{E} &= i\omega\mu\vec{H} \\
@@ -63,7 +63,7 @@
         All solutions satisfy the wave equations. $\vec{N}_{l,m}$ and $\vec{M}_{l,m}$ are solenoidal functions and are rotors of each other,
         like $\vec{H}$ and $\vec{E}$. $\vec{L}$, on the other hand is purely longitudinal, so we omit it in this analysis.
 
-    \subsection{Scalar Solution}
+    \subsubsection{Scalar Solution}
 
         In spherical coordinates, the scalar solution, $\psi_{l,m}$ of Equation \ref{mie:scalar} is a function of ${R, \theta, \phi}$
         \begin{align}
@@ -125,7 +125,7 @@
             \psi_{l,m,\substack{e\\ o}}(r, \theta, \phi) = \sqrt{\frac{1}{\pi}}Z_l(k_m r)P_l^m \substack{\cos\\\sin}(m\phi)
         \end{align}
 
-    \subsection{Vector Solution}
+    \subsubsection{Vector Solution}
 
         Using the previous equation,
 
@@ -156,7 +156,7 @@
         medium.
 
 
-    \subsection{Incident, Scattered and Internal Fields}
+    \subsubsection{Incident, Scattered and Internal Fields}
         We assume, that an arbitrary wave, expressed by $\vec{A}$ can be represented by a linear combination of vector functions:
 
         \begin{align}
@@ -197,7 +197,7 @@
 
         Where $a_l, b_l$ are scattering coefficients and $c_d, d_l$ are internal field coefficients.
 
-    \subsection{Mie Coefficients}
+    \subsubsection{Mie Coefficients}
 
         The Mie coefficients $a_l, b_l, c_l, d_l$ can be determined from boundary conditions on the edge of the sphere.
 
@@ -233,7 +233,7 @@
             d_l &= \frac{Nj_l(\xi)[\xi h_l(\xi)]' - N h_l(\xi)[\xi j_l(\xi)]'}{N^2 j_l(N\xi)[\xi h_l(\xi)]' - h_l(\xi)[N\xi j_l(N\xi)]'}
         \end{align}
 
-    \subsection{Cross Sections}
+    \subsubsection{Cross Sections}
         Scattering and extinction cross sections can be easily computed, knowing the Mie coefficients.
 
         \begin{align}
@@ -264,7 +264,7 @@
 
 \clearpage
 
-\section{Raman Scattering from Crystalline Materials}
+\subsection{Raman Scattering from Crystalline Materials}
 \label{ap:Raman}
     Raman scattering of light from crystalline materials is a versatile method of probing the phonon structure of the materials.
     A simplistic classical model of Raman scattering is sufficient to demonstrate the effect and to properly predict many of the
@@ -346,10 +346,10 @@
 
 \clearpage
 
-\section{Femtosecond Laser Ablation}
+\subsection{Femtosecond Laser Ablation}
 \label{ap:Ablation}
 
-    \subsection{Generation of femtosecond laser pulses}
+    \subsubsection{Generation of femtosecond laser pulses}
             Femtosecond laser pulse generation is usually done using chirped pulse amplification. A mode-locked seed laser is used
         to generate a train of low-power femtosecond pulses, which are then temporally stretched, amplified, compressed and output
         from the laser system. This is necessary, because the final, compressed femtosecond pulse can have extremely high peak power,
@@ -358,7 +358,7 @@
         This is usually accomplished using either two prisms and a mirror or two diffraction gratings and a mirror, though, using engineered
         dispersion in optical fibers is also possible~\cite{harilal2014femtosecond}.
 
-    \subsection{Ultrashort-pulse laser ablation}
+    \subsubsection{Ultrashort-pulse laser ablation}
             Laser ablation by ultrashort pulses, femto- and picosecond pulses, is a very efficient technique of patterning materials, because
         the short pulse length minimizes the influence of heat conduction on the ablated volume~--- keeping the ablation very localized and
         controlled.
@@ -440,7 +440,7 @@
         thermionic electron emission, etc... A more rigorous treatment would include lattice deformations caused by the heated electron gas. The
         deformation wave caused by the electron gas could cause the metal to fracture and ablate, without significant heating of the lattice itself.
 
-\section{Discrete Dipole Approximation}
+\subsection{Discrete Dipole Approximation}
 \label{ap:DDA}
 
     The discrete dipole approximation is a method of numerically simulating light scattering from arbitrarily shaped particles.
@@ -628,7 +628,7 @@
 
 
 
-\section{Finite Integration Technique}
+\subsection{Finite Integration Technique}
 \label{ap:FIT}
     The Finite Integration Technique (FIT) is a method for discretizing the Maxwell equations onto an arbitrary
     grid~\cite{weiland2001discrete}.  Because the FIT deals with the integral forms of the Maxwell equations, it,

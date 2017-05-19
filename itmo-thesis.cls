@@ -70,7 +70,6 @@
 
 %% Включение графических файлов
 %% we don't need to load graphicx since it will be loaded by xunicode (which is loaded by fontspec)
-\usepackage[titletoc]{appendix}
 
 %% Эта команда добавляет отчеркнутое место для подписи после имени
 %% Аргументы: имя и пояснение под чертой (например, слово "подпись")
@@ -260,8 +259,11 @@
     Scientific supervisor:\\
     \my@title@supervisorPosition@en\ \my@title@supervisor@en\sigspace
 
+    \ifthenelse{\equal{\my@title@reviewer@en}{}}
+    {}{
     Reviewer:\\
-    \my@title@reviewerPosition@en\ \my@title@reviewer@en
+    \my@title@reviewerPosition@en\ \my@title@reviewer@
+    }
     }
   \end{center}
 \end{titlepage}
@@ -296,7 +298,7 @@
 \setcounter{page}{\value{titlepages}}
 % restore preamble's geometry
 \my@body14pt
-\newgeometry{a4paper,top=20mm,bottom=20mm,left=30mm,right=15mm,nohead,includeheadfoot}
+\newgeometry{a4paper,top=20mm,bottom=20mm,left=25mm,right=10mm,nohead,includeheadfoot}
 }
 
 \usepackage{titlesec}
@@ -311,6 +313,10 @@
 
 %% Каждая глава начинается с новой страницы, введение и заключение не
 %% нумеруются, но в оглавление входят. А само оглавление в оглавление не входит
+\titleformat{\section}
+{\normalfont\Large\bfseries\centering}{\thesection.}{1em}{}
+
+
 \let\old@section\section
 \def\section{\@ifstar\@section\@@section}
 \def\@section#1{\newpage\old@section*{#1}%
@@ -319,6 +325,8 @@
            {\addcontentsline{toc}{section}{#1}}%
 }
 \def\@@section#1{\newpage\old@section{#1}}
+
+
 
 %% Полуторный интервал
 \usepackage[nodisplayskipstretch]{setspace}
@@ -330,3 +338,11 @@
 
 \let\savenumberline\numberline
 \def\numberline#1{\savenumberline{#1.}}
+
+\usepackage[title, titletoc]{appendix}
+
+% \renewcommand{
+%     \thesubsection}{\ifthenelse{\equal{section}{}}
+%     {\Alph{subsection}}
+%     {\arabic{section}.\arabic{subsection}}
+% }
