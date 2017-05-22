@@ -53,9 +53,8 @@
 %% выбрать Unicode шрифт в котором есть кириллические глифы. Ниже
 %% основным шрифтом выбирается Unicode версия шрифта Computer Modern с заcечками
 \usepackage{fontspec}
-\setmainfont{Liberation Serif}
-\setsansfont{Liberation Sans}
-\setmonofont{Liberation Mono}
+\setmainfont{Times New Roman}
+\newfontfamily{\cyrillicfont}{Times New Roman}
 
 %% В XeLaTex заменой известного пакета babel является пакет polyglossia.
 %% Теперь у нас будут переносы слов
@@ -319,7 +318,7 @@
   	{\normalfont\large\bfseries\centering}{\thesubsection.}{1em}{}
 \titleformat{\subsubsection}
   	{\normalfont\normalsize\bfseries\centering}{\thesubsubsection.}{1em}{}
-\titleformat{\paragraph}[runin]
+\titleformat{\paragraph}
   	{\normalfont\normalsize\bfseries\centering}{\theparagraph.}{1em}{}
 
 
@@ -336,7 +335,8 @@
 
 %% Полуторный интервал
 \usepackage[nodisplayskipstretch]{setspace}
-\onehalfspacing
+% \onehalfspacing
+\linespread{1.3}
 
 %% Переименование "содержания" в "оглавление"
 
