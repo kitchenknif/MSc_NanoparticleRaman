@@ -314,7 +314,13 @@
 %% Каждая глава начинается с новой страницы, введение и заключение не
 %% нумеруются, но в оглавление входят. А само оглавление в оглавление не входит
 \titleformat{\section}
-{\normalfont\Large\bfseries\centering}{\thesection.}{1em}{}
+	{\normalfont\Large\bfseries\centering}{\thesection.}{1em}{}
+\titleformat{\subsection}
+  	{\normalfont\large\bfseries\centering}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}
+  	{\normalfont\normalsize\bfseries\centering}{\thesubsubsection.}{1em}{}
+\titleformat{\paragraph}[runin]
+  	{\normalfont\normalsize\bfseries\centering}{\theparagraph.}{1em}{}
 
 
 \let\old@section\section
